@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .tab_btns {
+        width: 300px;
+        display: flex;
+    }
+
+    .tab_btn {
+        flex:1;
+        border: 1px solid;
+        padding: 5px 20px;
+        transition: 0.3s;
+    }
+    
+    .tab_btn.visited {
+        color: white;
+        background-color: black;
+    }
+
+    .tab_content {
+        width: 300px;
+        border: 1px solid;
+        padding: 20px 10px;
+        display: none;
+        transition: 0.5s;
+    }
+
+    .tab_content.active {
+        display:block;
+    }
+</style>
+<body>
+    <div class="tab_btns">
+        <div class="tab_btn visited">Tab1</div>
+        <div class="tab_btn">Tab2</div>
+        <div class="tab_btn">Tab3</div>
+    </div>
+
+    <div class="tab_contents">
+        <div class="tab_content active">title1-- Lorem ipsum dolor sit amet.</div>
+        <div class="tab_content ">title2-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae?</div>
+        <div class="tab_content">title3-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, porro. Quidem officiis repellat id. Officia!</div>
+    </div>
+
+    <script>
+        // const tab_btns = document.querySelectorAll('.tab_btn');
+        // const tab_contents = document.querySelectorAll('.tab_content')
+    
+        // function clickHandler() {
+        //     tab_contents.forEach((content , Index) => {
+        //         content.classList.remove('active')
+        //     });
+        //     tab_btns.forEach(btn => {
+        //         btn.classList.remove('visited');
+        //     });
+
+        //     var index = Array.from(tab_btns).indexOf(this);
+        //     tab_contents[index].classList.add('active');
+        //     tab_btns[index].classList.add('visited')
+        // }
+
+        // tab_btns.forEach((btn, Index) => {
+        //     btn.addEventListener('click', clickHandler);
+        // });  
+        // 自己作法 
+
+        
+    </script>
+</body>
+</html>

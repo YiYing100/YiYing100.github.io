@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100%
+        }
+
+        nav {
+            padding:10px 0;
+            width: 100%;
+            position: fixed;
+            top:-27px;
+            z-index: 999;
+        }
+        .navBars {
+            width: 100%;
+            background-color: black;
+            height: 40px;
+            text-align: right;
+        }
+
+        .navBars .icon {
+            float: left;
+        }
+        .navBar li {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: black;
+            color:white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+
+        .firstPage {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://specials-images.forbesimg.com/imageserve/5d76a28a5b52ce000882bb8b/960x0.jpg?fit=scale');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .firstPage h1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .secondPage {
+            background-image: url('https://api.time.com/wp-content/uploads/2020/01/Dinosaurs.jpg');
+            width: 100%;
+            height: 90vh;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .secondPage .secondContent1 {
+            background-color: white;
+            padding: 50px 100px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .secondPage .secondContent1 p {
+            margin-top: 50px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .secondPage h3 {
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+
+        .secondPage .secondContent2 {
+            background-color: black;
+            color: white;
+            padding: 50px 30px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .thirdPage {
+            width: 100%;
+            height: 60vh;
+            background-image: url('https://api.time.com/wp-content/uploads/2018/06/dinosaurs-jurassic-world-fact-check-3.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.8;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .thirdPage .thirdContent1 {
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 50px 30px;
+            position: absolute;
+            bottom: 0;
+            opacity: 0.8;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .fourthPage {
+            background-image: url('https://www.herocollector.com/Content/ArticleImages/0e3147ff-02b8-48e9-872f-9b609ffd24e9.jpg');
+            width: 100%;
+            height: 100vh;
+            opacity: 0.8;
+            background-size: cover;
+            position: relative;
+        }
+
+        .fourthPage h3 {
+            color: white;
+            background-color: black;
+            padding: 50px 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 5px;
+            font-size: 28px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="navBars">
+                <div class="icon"></div>
+                <ul class='navBar'>
+                    <a href="#1"><li>firstPage</li></a>
+                    <a href="#2"><li>secondPage</li></a>
+                    <a href="#3"><li>thirdPage</li></a>
+                    <a href="#4"><li>fourthPage</li></a>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div id= '1' class="firstPage">
+            <h1 class='animated infinite flash delay-1s'>scroll down</h1>
+        </div>
+        <div id= '2' class="secondPage">
+            <h3 data-aos="fade-right">LESS HEIGHT</h3>
+            <div class="secondContent1" data-aos="fade-up">
+                <h2 data-aos="fade-up">PARALLAX DEMO</h2>
+                <p data-aos="fade-up">Parallax scrolling is a web site trend where the background content is moved  at a different speed
+                    than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero
+                    turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna
+                    turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum
+                    dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius
+                    quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper,
+                    dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend,
+                    aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit
+                    proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor
+                    placerat leo.</p>
+            </div>
+            <div class="secondContent2 " data-aos="fade-up">
+                <p data-aos='fade-down'>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+            </div>
+        </div>
+        <div id= '3' class="thirdPage" data-aos="fade-up">
+            <div class="thirdContent1">
+                <p data-aos="fade-up-right">Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+            </div>
+        </div>
+        <div id= '4' class="fourthPage">
+            <h3 class="animated hinge delay-2s" data-aos="fade-up-left">
+                Bye!
+            </h3>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

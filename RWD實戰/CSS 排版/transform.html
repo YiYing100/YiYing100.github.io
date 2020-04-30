@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .block {
+        width: 300px;
+    }
+    .block h1, .block p {
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .block:hover h1, .block:hover p {
+        opacity: 1;
+    }
+    
+    .block p {
+        transition-delay: 0.5s;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        border:1px solid black;
+        position: relative;
+    }
+
+    .box .line {
+        width: 100px;
+        height: 20px;
+        border: 1px solid black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+    }
+
+    .box:hover .line1 {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .box:hover .line2 {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .collapse {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        position: relative;
+    }
+
+    .collapse .line {
+        width: 150px;
+        height: 20px;
+        border: 1px black solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .collapse .line1 {
+        top: 25%;
+        transition: 0.5s;
+    }
+
+
+
+    .collapse .line3 {
+        top: 75%;
+        transition: 0.5s;
+    }
+
+    .collapse:hover .line1 {
+        top:50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition-property: top, transform;
+        transition-duration: 1s, 2s;
+    }
+
+    .collapse:hover .line3 {
+        top:50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition-property: top, transform;
+        transition-duration: 1s, 2s;
+
+    }
+
+    .collapse:hover .line2 {
+        opacity: 0;
+    }
+    
+    .circle {
+        width: 500px;
+    }
+
+    .ball {
+        width: 130px;
+        height: 130px;
+        border:1px solid black;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+
+    .ball1 {
+        animation: ani1 1s 1s infinite;
+
+    }
+
+    @keyframes ani1 {
+        50% {
+            transform: translateX(500px);
+        }
+    }
+
+</style>
+<body>
+    <!-- <div class="block">
+        <h1>標題</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias harum saepe porro eum reiciendis accusantium illum aspernatur eos! Modi ipsum sunt nemo numquam porro, harum doloribus optio voluptatem saepe reiciendis.</p>
+    </div>
+
+    <div class="box">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+    </div>
+
+    <div class="collapse">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div> -->
+
+    <div class="circle">
+        <div class="ball ball1"></div>
+        <div class="ball ball2"></div>
+        <div class="ball ball3"></div>
+        <div class="ball ball4"></div>
+        <div class="ball ball5"></div>
+    </div>
+</body>
+</html>

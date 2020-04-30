@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .banner_section {
+            height: calc(100vh - 67px);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-image: url('imgs/cat2.jpg');
+        }
+
+        nav {
+            position: sticky;
+            background-color: white;
+            top: 0;
+            padding: 10px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            height: 50px;
+            display: block;
+        }
+
+        nav .mobile-navbar-toggle {
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav li {
+            display: block;
+        }
+
+        nav li a {
+            /* 第一種撐開a的方法 */
+            /* width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: block; */
+
+            padding: 15px;
+        }
+
+        nav li a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .setion_1 {
+            background-color: red;
+            padding: 60px 0 30px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row .block {
+            padding: 0 30px;
+            width: 50%;
+            margin-bottom: 30px;
+            order: 2;
+        }
+
+        .row .block img {
+            width: 100%;
+            /* min-width: 600px;  */
+            /*最小寬度*/
+            /* max-width: 100%;  */
+            /*限定最大寬度 父層的100% */
+        }
+
+        .row .block .bg-img {
+            height: 300px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+
+        .row .block .bg-img1 {
+            background-image: url('imgs/cat1.jpg');
+        }
+
+        .row .block .bg-img2 {
+            background-image: url('imgs/cat2.jpg');
+        }
+
+        .setion_2 {
+            background-color: blue;
+            padding: 60px 0 30px;
+        }
+
+
+        .setion_3 {
+            background-color: yellow;
+            padding: 60px 0 30px;
+        }
+
+
+        @media (max-width: 768px) {
+            .row .block {
+                width: 100%;
+            }
+
+            .row:nth-child(2) .block:last-child {
+                order: 1;
+            }
+
+            nav .mobile-navbar-toggle {
+                display: block;
+                color: red;
+            }
+
+            nav .navbar-links {
+                display: none;
+            }
+
+            .mobile-nav-links{
+                display: none;
+                width: 100%;
+                height: calc(100vh);
+                background-color: white;
+                position: fixed;
+                top: 0;
+            }
+
+            .mobile-nav-links.active{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner_section">
+    </section>
+
+    <nav>
+        <div class="container">
+            <div>
+                <img class="logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1024px-Volkswagen_logo_2019.svg.png"
+                    alt="">
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <li>
+                        <a href="">Section1</a>
+                    </li>
+                    <li>
+                        <a href="">Section2</a>
+                    </li>
+                    <li>
+                        <a href="">Section3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-navbar-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav-links">
+        <span class="close-nav">X</span>
+        <ul>
+            <li>
+                <a href="">Section1</a>
+            </li>
+            <li>
+                <a href="">Section2</a>
+            </li>
+            <li>
+                <a href="">Section3</a>
+            </li>
+        </ul>
+    </div>
+
+    <section id="setion_1" class="setion_1">
+        <div class="container">
+            <div class="row">
+                <div class="block">
+                    <!-- <img src="imgs/cat1.jpg" alt=""> -->
+                    <div class="bg-img bg-img1"></div>
+                </div>
+                <div class="block">
+                    <h1>Title</h1>
+                    <p>說得簡單一些，透過CSS，可以使得網站透過不同大小的螢幕視窗來改變網頁排版的方式，使得各種裝置的使用者，如電腦、平板、手機、電視都能夠得到最佳的視覺效果，由於是由同一個網頁內容轉變，管理者也就不必大費周章的重複更新網頁資訊。
+                        為了讓網站業主們輕鬆跟上這個浪潮，愛貝斯精心準備了CP值超高的網頁設計方案。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="block">
+                    <h1>人手一機的時代，有60%的人用手機瀏覽您的網站</h1>
+                    <p>根據Google的統計，將近60%的人們使用手機瀏覽網站。更有許多回家都不開電腦，只透過手機來獲取網頁資訊的群眾，而且比例越來越高。這時候如果沒有重視手機上的網站呈現效果，可能會流失相當多的潛在客戶。
+                    </p>
+                </div>
+                <div class="block">
+                    <!-- <img src="imgs/cat2.jpg" alt=""> -->
+                    <div class="bg-img bg-img2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setion_2" class="setion_2">
+        <div class="container">
+            <div class="row">
+                <div class="block">
+                    <!-- <img src="imgs/cat1.jpg" alt=""> -->
+                    <div class="bg-img bg-img1"></div>
+                </div>
+                <div class="block">
+                    <h1>Title</h1>
+                    <p>說得簡單一些，透過CSS，可以使得網站透過不同大小的螢幕視窗來改變網頁排版的方式，使得各種裝置的使用者，如電腦、平板、手機、電視都能夠得到最佳的視覺效果，由於是由同一個網頁內容轉變，管理者也就不必大費周章的重複更新網頁資訊。
+                        為了讓網站業主們輕鬆跟上這個浪潮，愛貝斯精心準備了CP值超高的網頁設計方案。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="block">
+                    <h1>人手一機的時代，有60%的人用手機瀏覽您的網站</h1>
+                    <p>根據Google的統計，將近60%的人們使用手機瀏覽網站。更有許多回家都不開電腦，只透過手機來獲取網頁資訊的群眾，而且比例越來越高。這時候如果沒有重視手機上的網站呈現效果，可能會流失相當多的潛在客戶。
+                    </p>
+                </div>
+                <div class="block">
+                    <!-- <img src="imgs/cat2.jpg" alt=""> -->
+                    <div class="bg-img bg-img2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setion_3" class="setion_3">
+        <div class="container">
+            <div class="row">
+                <div class="block">
+                    <!-- <img src="imgs/cat1.jpg" alt=""> -->
+                    <div class="bg-img bg-img1"></div>
+                </div>
+                <div class="block">
+                    <h1>Title</h1>
+                    <p>說得簡單一些，透過CSS，可以使得網站透過不同大小的螢幕視窗來改變網頁排版的方式，使得各種裝置的使用者，如電腦、平板、手機、電視都能夠得到最佳的視覺效果，由於是由同一個網頁內容轉變，管理者也就不必大費周章的重複更新網頁資訊。
+                        為了讓網站業主們輕鬆跟上這個浪潮，愛貝斯精心準備了CP值超高的網頁設計方案。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="block">
+                    <h1>人手一機的時代，有60%的人用手機瀏覽您的網站</h1>
+                    <p>根據Google的統計，將近60%的人們使用手機瀏覽網站。更有許多回家都不開電腦，只透過手機來獲取網頁資訊的群眾，而且比例越來越高。這時候如果沒有重視手機上的網站呈現效果，可能會流失相當多的潛在客戶。
+                    </p>
+                </div>
+                <div class="block">
+                    <!-- <img src="imgs/cat2.jpg" alt=""> -->
+                    <div class="bg-img bg-img2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var mobile_toggle = document.querySelector(".mobile-navbar-toggle"); //手機版的按鈕
+        var mobile_nav_links = document.querySelector(".mobile-nav-links"); //手機版的選單
+        var close_nav = document.querySelector(".close-nav"); //關掉選單的按鈕
+
+        mobile_toggle.addEventListener("click",function () {
+            //選單要打開
+
+            //加上class "active"
+            mobile_nav_links.classList.add("active");
+        });
+
+        close_nav.addEventListener("click",function(){
+            mobile_nav_links.classList.remove("active");
+        });
+
+    </script>
+</body>
+
+</html>

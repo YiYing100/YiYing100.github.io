@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../package/css/swiper.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: #eee;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .relative {
+            position: relative;
+            height: 100%;
+        }
+
+        nav {
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+        }
+
+        .nav {
+            width: 1140px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .nav img {
+            width: 80px;
+        }
+
+        .nav ul {
+            display: flex;
+            margin: 0;
+            align-items: center;
+
+        }
+
+        .nav ul li {
+            color: white;
+            list-style: none;
+        }
+
+
+        .swiper-container {
+            width: 100%;
+            height: 90vh;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide.banner1 {
+            background-image: url('https://clutchpoints.com/wp-content/uploads/2019/09/Brooklyn-to-give-away-10000-Kyrie-Irving-jerseys-at-Oct.-25-game-vs.jpg');
+            background-size: cover;
+        }
+
+        .swiper-slide.banner2 {
+            background-image: url('https://i.ytimg.com/vi/XWXbfpoaLSg/maxresdefault.jpg');
+            background-size: cover;
+        }
+
+        .swiper-slide.banner3 {
+            background-image: url('https://img.sportsv.net/img/article/cover/3/60723/fit-KojpfzBnHL-1200x628.jpg');
+            background-size: cover;
+        }
+
+        #section2 {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            background-image: url('https://clutchpoints.com/wp-content/uploads/2019/09/Brooklyn-to-give-away-10000-Kyrie-Irving-jerseys-at-Oct.-25-game-vs.jpg');
+            opacity: 0.8;
+        }
+
+        #section2 .content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #section2 .content h1 {
+            color: white;
+            margin: 0 auto;
+        }
+
+        #section2 .content p {
+            color: white;
+            text-align: justify;
+            font-size: 28px;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+        }
+
+        #section3 .backgroundImg {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://image.winudf.com/v2/image/Y29tLmZyZXlzdHVkaW8ua3lyaWVpcnZpbmd3YWxscGFwZXJzX3NjcmVlbl8zXzE1MTg0OTc3NDBfMDMz/screen-3.jpg?fakeurl=1&type=.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #section4 {
+            width: 100%;
+            height:100vh;
+            background-color:black;
+        }
+
+        #section4 .content {
+            display: flex;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: 
+        }
+
+        #section4 .container .content .card {
+            width: 30%;
+            height: 500px;
+            background-color: azure;
+            text-align: justify;
+        }
+
+        #section4 .card img {
+            width: 100%;
+        }
+
+        #section4 .card p {
+            font-size: 24px;
+        }
+
+        #section5 {
+            background-color: black;
+        }
+        #section5 .content {
+            display: flex;
+            justify-content: space-between;
+            padding: calc((100vh - 315px)/2) 0;
+            color: white;
+        }
+
+        #section5 .content img {
+            width: 45%;
+        }
+
+        #section5 .content .text {
+            width: 45%;
+            font-size: 24px;
+            text-align: justify;
+        }
+
+        #section6 .content .card {
+            width: 100%;
+            height: 300px;
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="section1">
+        <nav>
+            <div class="nav">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRLFD6vNeUk6jbNvLlmoPL7-z-m_faOMqH-ZM5eVGVKSuH1RFvQ&usqp=CAU"
+                    alt="">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner1"></div>
+                <div class="swiper-slide banner2"></div>
+                <div class="swiper-slide banner3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div id="section2">
+        <div class="container relative">
+            <div class="content">
+                <h1>Kyrie Irving</h1>
+                <p>
+                    Kyrie Andrew Irving (born March 23, 1992) is an American professional basketball player
+                    for the Brooklyn Nets of the National Basketball Association (NBA). He was named the Rookie of the
+                    Year after being selected by the Cleveland Cavaliers with the first overall pick in the 2011 NBA
+                    draft. A six-time All-Star and two-time member of the All-NBA Team, he won an NBA championship with
+                    the Cavaliers in 2016.
+
+                    Irving played college basketball for the Duke Blue Devils before joining the Cavaliers in 2011. He
+                    won the Most Valuable Player (MVP) award for the 2014 All-Star Game. In the 2016 NBA Finals, he made
+                    a three-point field goal with 53 seconds remaining in a tied Game 7 to help lead the Cavaliers to a
+                    championship over the Golden State Warriors. After losing a rematch with the Warriors in the 2017
+                    Finals, Irving requested a trade and was dealt to the Boston Celtics. He played as a Celtic for two
+                    seasons, after which he signed with the Brooklyn Nets as a free agent in 2019. He has also played
+                    for the United States national team, with which he won gold at the 2014 FIBA Basketball World Cup
+                    and the 2016 Summer Olympics. In 2018, he starred in the film Uncle Drew.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="section3">
+        <div class="backgroundImg">
+
+        </div>
+    </div>
+
+    <div id="section4">
+        <div class="container">
+            <div class="content">
+                <div class="card">
+                    <img src="https://images.daznservices.com/di/library/sporting_news/89/49/kyrie-irving-getty-112319-ftrjpg_1nvgqkuiyw7j91g9actpphea8e.jpg?t=-1632179394&quality=100" alt="">
+                    <p>Irving was born in Melbourne, Australia, on March 23, 1992 the son of Drederick and Elizabeth Irving, American expats, and the stepson of Shetellia Irving.He has an older sister, Asia, and a younger sister, London. </p>
+                </div>
+                <div class="card">
+                    <img src="https://images.daznservices.com/di/library/sporting_news/89/49/kyrie-irving-getty-112319-ftrjpg_1nvgqkuiyw7j91g9actpphea8e.jpg?t=-1632179394&quality=100" alt="">
+                    <p>Irving was born in Melbourne, Australia, on March 23, 1992 the son of Drederick and Elizabeth Irving, American expats, and the stepson of Shetellia Irving.He has an older sister, Asia, and a younger sister, London. </p>
+                </div>
+                <div class="card">
+                    <img src="https://images.daznservices.com/di/library/sporting_news/89/49/kyrie-irving-getty-112319-ftrjpg_1nvgqkuiyw7j91g9actpphea8e.jpg?t=-1632179394&quality=100" alt="">
+                    <p>Irving was born in Melbourne, Australia, on March 23, 1992 the son of Drederick and Elizabeth Irving, American expats, and the stepson of Shetellia Irving.He has an older sister, Asia, and a younger sister, London. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section5">
+        <div class="container relative">
+            <div class="content">
+                <img src="https://insidesports.tw/wp-content/uploads/2017/07/13_Kyrie-Irving%E6%96%BC%E8%A8%93%E7%B7%B4%E7%87%9F%E4%B8%AD%E5%AF%A6%E8%91%97%E5%85%A8%E6%96%B0%E6%8E%A8%E5%87%BA%E7%9A%84KYRIE-3-Marble%E9%85%8D%E8%89%B2.jpg" alt="">
+                <div class="text">
+                    <h2>IRVING</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis inventore earum cum ullam ea magnam voluptas dolore culpa, est sed expedita voluptates fuga, dignissimos quo, modi temporibus qui. Exercitationem hic itaque suscipit quisquam numquam et porro placeat cupiditate, deserunt cumque voluptatibus fugit consequatur laborum similique omnis nobis sed vel?</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="section6">
+        <div class="container">
+            <div class="content">
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="../package/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

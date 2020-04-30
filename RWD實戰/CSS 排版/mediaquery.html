@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        .nav_bar {
+            width: 15%;
+            height: 100vh;
+            /* background-color:white; */
+            background: linear-gradient(white, rgb(86, 113, 236));
+            position: relative;
+        }
+
+        .nav_content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .nav_bar img {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .nav_items {
+            font-size: 26px;
+            line-height: 80px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .nav_item:hover {
+            color:coral
+        }
+
+
+        .content {
+            width: 85%;
+            height: 100vh;
+            background-image: url('https://handler.travel/wp-content/uploads/2019/05/miyako.shimojishima.airport_58749564_2243651382551855_163376142452106998_n.jpg');
+            background-size: cover;
+        }
+
+        .block {
+            width: 60%;
+            height: 100vh;
+            margin: auto;
+            position: relative;
+        }
+
+        .bigBox {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translatey(-50%);
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .box1 {
+            width: 30%;
+            height: 100%;
+            background-image: url('https://i1.achangpro.com/img.miha.tw/photo/2015hwi/modern/tm39.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box1:hover,
+        .box2:hover,
+        .box3:hover {
+            transform: scale(1.2);
+            transition: 1s;
+        }
+
+
+        .box2 {
+            width: 30%;
+            height: 100%;
+            background-image: url('https://www.newamazing.com.tw/eWeb_newamazing/IMGDB/000206/000207/000212/00005595.JPG');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .box3 {
+            width: 30%;
+            height: 100%;
+            background-image: url('https://www.northwest.com.tw/travel/images/main/733cd26be00d57aadadffba17e27c309.jpg');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        @media screen and (max-width:1280px) {
+            .nav_item {
+                color: white;
+            }
+
+            .bigBox {
+                flex-wrap: wrap;
+            }
+
+            .box1 {
+                width: 100%;
+                height: 50%;
+                margin: 0;
+            }
+
+            .box2 {
+                width: 47%;
+                height: 50%;
+                margin-top: 30px;
+            }
+
+            .box3 {
+                width: 47%;
+                height: 50%;
+                margin-top: 30px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+
+            .container {
+                display: block;
+            }
+
+            .nav_bar {
+                width: 100%;
+                height: 15%;
+                background-color: violet;
+            }
+
+            .nav_content {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .nav_content img {
+                height: 80px;
+                padding: 10px;
+            }
+
+            .nav_menu {
+                width: 60%;
+            }
+
+            .nav_items {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .content {
+                width: 100%;
+                height: 85%;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .nav_bar {
+                background-color: black;
+            }
+
+            .nav_content {
+                position: relative;
+                align-items: center;
+            }
+
+            .nav_menu {
+                width: 50px;
+                height: 50px;
+                order: -2;
+                background-image: url('./img/bootstrap-v3-multi-dropdown-mobile-screenshot-549x432.png');
+                background-size: cover;
+                margin-left: 25px;
+
+            }
+
+            .nav_menu:hover .nav_items {
+                display: block;
+            }
+
+            .nav_items {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 62px;
+                background-color: black;
+                display: none;
+                width: 150px;
+            }
+
+            .content {
+                height: 1500px;
+            }
+
+            .box1,
+            .box2,
+            .box3 {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <div class="nav_content">
+                <img class='animated infinite bounce delay-2s' src="./img/multiple_vacation.png">
+                <div class="nav_menu">
+                    <div class="nav_items">
+                        <div class="nav_item ">夏威夷</div>
+                        <div class="nav_item ">沖繩</div>
+                        <div class="nav_item ">七美</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="block">
+                <div class="bigBox">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

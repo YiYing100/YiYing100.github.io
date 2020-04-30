@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .container .title{
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .weatherCards {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+        }
+
+        .weathercard {
+            margin-top: 20px;
+            width: 33.33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class= 'title'>現在時間:</h2>
+        <div class="weatherCards">
+        </div>
+    </div>
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-1CBCF11F-211F-46A4-BA6A-FD4677C3B3B3')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (weather_data) {
+                let locations = weather_data.records.location
+                locations.forEach(location => {
+                    let locationName = location.locationName
+                    let Wx = location.weatherElement[0].time[0].parameter.parameterName //氣象
+                    let PoP = location.weatherElement[1].time[0].parameter.parameterName //降雨機率
+                    let CI = location.weatherElement[3].time[0].parameter.parameterName //舒適度
+                    let MaxT = location.weatherElement[4].time[0].parameter.parameterName //最高溫
+                    let MinT = location.weatherElement[2].time[0].parameter.parameterName //最低溫
+
+                    let wxVaule= location.weatherElement[0].time[0].parameter.parameterValue
+
+                    let weatherCards = document.querySelector('.weatherCards')
+
+                    let weather = ''
+                    if (wxVaule == 1){
+                        weather = './img/sun.jpg'
+                    }else if(wxVaule > 1 && wxVaule < 8){
+                        weather = './img/cloud.jpg'
+                    }else if(wxVaule >= 8 && wxVaule <15){
+                        weather = './img/rain.jpg'
+                    }
+                    weatherCards.innerHTML += 
+                    `
+                    <div class="weathercard">
+                    <div class="img">
+                    <img src=${weather} alt="">
+                    </div>
+                    <h2>${locationName}</h2>
+                    <p>降雨機率: ${PoP}</p>
+                    <p>舒適度: ${CI}</p>
+                    <p>最高溫: ${MaxT}</p>
+                    <p>最低溫: ${MinT}</p>
+                    </div>
+                    `
+                });
+            });
+        let time = document.querySelector('.container h2')
+        function nowTime(){
+            time.innerHTML = new Date();
+        }
+
+        setInterval(nowTime,1000);
+    </script>
+</body>
+
+</html>
