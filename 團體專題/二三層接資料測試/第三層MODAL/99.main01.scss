@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    position: relative;
+}
+    .modal-dialog {
+        max-width: 100vw;
+    }
+
+    .toggle_box {
+        position: absolute;
+        z-index: 10;
+        margin: 20px 15px;
+        color:#AAA;
+        @media screen and(max-width:991px) {
+            margin-left: 94%;
+            margin-top: 15px;
+            color:white;
+        }
+        @media screen and(max-width:650px) {
+            margin-left: 93%;
+            margin-top: 10px;
+        }
+        @media screen and(max-width:550px) {
+            margin-left: 91%;
+        }
+        @media screen and(max-width:400px) {
+            margin-left: 90%;
+        }
+        @media screen and(max-width:350px) {
+            margin-left: 89%;
+        }
+
+
+
+    }
+
+    .left_box {
+        position: absolute;
+        width: 30px;
+        height: 600px;
+        margin: 65px 16px;
+        z-index: 10;
+        p{
+            writing-mode: vertical-lr;
+            font-size: 20px;
+            margin: 0;
+            color:#AAA;
+            text-align: justify;
+            letter-spacing: 5px;
+        }
+        @media screen  and (max-width:1500px) {
+            margin: 65px 20px;
+            
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            display: none;
+        }
+    }
+
+    .pic {
+        position: absolute;
+        margin-top: 13%;
+        margin-left: 38%;
+        width: 150px;
+        height: 150px;
+        background-image: url(./img/山png0.png);
+        background-position: center;
+        background-size: cover;
+        z-index: 10;
+        @media screen  and (max-width:1500px) {
+            margin-top: 10%;
+            margin-left: 34%;
+    
+        }
+        @media screen  and (max-width:1350px) {
+            margin-top: 7%;
+            margin-left: 34%;
+        }
+        @media screen  and (max-width:1250px) {
+            margin-top: 5%;
+            margin-left: 34%;
+        }
+        @media screen  and (max-width:1125px) {
+            margin-top: 2%;
+            margin-left: 34%;
+        }
+        @media screen  and (max-width:991px) {
+            display: none;
+        }
+
+
+    }
+    .card {
+        .col-lg-6 {
+            display: flex;
+            align-items: center;
+
+                .text {
+                    padding: 0 50px;
+                    z-index: 11;
+
+                }
+        }
+
+
+        .col-12 {
+            width: 100%;
+            .text {
+                width: 100%;
+                height: 600px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                letter-spacing: 5px;
+                text-align: justify;
+                padding: 0 80px;
+                @media screen and (max-width:991px) {
+                    padding: 0 60px;
+                }
+                @media screen and (max-width:600px) {
+                    width: 100%;
+                    height: 600px;
+                    padding: 0 20px;
+                    p{
+                        height: 300px;
+                        font-size: 12px;
+                        overflow: auto; 
+                    }
+                }
+    
+            }
+
+        }
+
+
+    }
+    .bottom_box {
+        position: absolute;
+        bottom: 0;
+        //父層position:relative
+        //搭配position:absolute及bottm:0則.bottom_box就會常駐底部
+        width: 800px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        
+        
+        .bo_left {
+            margin: 0;
+            width: 300px;
+            padding: 20px 0;
+            @media screen  and (max-width:1300px) {
+                width: 250px;
+            }      
+            @media screen  and (max-width:1100px) {
+                width: 200px;
+            }
+            @media screen  and (max-width:991px) {
+                width: 300px;
+            }      
+            @media screen  and (max-width:650px) {
+                width: 150px;
+            }      
+            @media screen  and (max-width:450px) {
+                width: 80px;
+            }      
+
+
+        }
+        .bo_center {
+            width: 80px;
+            height: 80px;
+            padding: 10px 0;
+            border: black 1px solid;
+            border-radius: 0 100% 100% 0;
+            border-top: none;           
+            border-left: none;
+            border-bottom: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen  and (max-width:550px) {
+                width: 60px;
+                height: 60px;
+                
+            }
+            .bo_box {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                background-image: url(./img/統一版照片-慈濟宮.jpg);
+                background-position: center;
+                background-size: cover;
+                @media screen  and (max-width:550px) {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }    
+
+            .bo_right {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                margin-left: 10px;
+                a {
+                    background-color: #AAA;
+                    color: white;
+                    border-radius: 4px;
+                }
+                p {
+                    letter-spacing: 2px;
+                    font-size: 12px;
+                    @media screen  and (max-width:1500px) {
+                        font-size: 8px;
+                    }
+                    @media screen  and (max-width:500px) {
+                        letter-spacing: 1px;
+                        font-size: 2px;
+                    }
+    
+    
+                }
+
+            }
+
+        
+        
+    }
+        
+    

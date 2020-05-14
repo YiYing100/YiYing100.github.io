@@ -1,0 +1,120 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content .gallery-thumbs {
+  height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 30px;
+}
+
+.content .gallery-thumbs .swiper-slide {
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 140px;
+  position: relative;
+}
+
+.content .gallery-thumbs .swiper-slide .thumb_content {
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 1000px;
+}
+
+.content .gallery-thumbs .swiper-slide .thumb_content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+}
+
+.content .gallery-thumbs .swiper-slide .thumb_content .sub_title2 {
+  color: #8b8989;
+}
+
+.content .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  border: 2px solid yellow;
+}
+
+.content .gallery-thumbs .swiper-slide-thumb-active.swiper-slide .thumb_content {
+  display: block;
+}
+
+.content .gallery-top {
+  position: relative;
+  right: -170px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-mask: url(./img/mask.png) no-repeat center left;
+          mask: url(./img/mask.png) no-repeat center left;
+  mask-mode: alpha;
+  -webkit-mask-size: 65.8%;
+          mask-size: 65.8%;
+}
+
+.content .gallery-top .swiper-slide.swiper-slide-active {
+  position: relative;
+  -webkit-animation: move 7s infinite;
+          animation: move 7s infinite;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes move {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 100px;
+  }
+}
+
+@keyframes move {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 100px;
+  }
+}
+
+.background_img {
+  background: url("./img/word.png") no-repeat center;
+  width: 820px;
+  height: 820px;
+  background-size: contain;
+  position: absolute;
+  top: 4%;
+  left: 51%;
+  z-index: 2;
+}
+/*# sourceMappingURL=picture.css.map */

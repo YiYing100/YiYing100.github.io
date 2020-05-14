@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/target.css" />
+</head>
+
+<body>
+  <section id="section1">
+    <svg style="position: absolute;width:100%;height:100%">
+      <defs>
+        <clipPath id="myClip">
+          <rect x="44.5%" y="15%" width="33.5%" height="22%">
+            <animate attributeName="x" to="35.1%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="35%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="33.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="28.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27.2%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="39.8%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.3%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="33.1%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+          <rect x="28.5%" y="39.4%" width="31.5%" height="21%">
+            <animate attributeName="x" to="25.5%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="40.5%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="28.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="31.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="33.7%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="22%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="44.9%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="39.9%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.15%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+          <rect x="40%" y="63.6%" width="27%" height="21.3%">
+            <animate attributeName="x" to="50%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="30%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="40%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="40%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="26.9%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="21.9%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.2%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+        </clipPath>
+      </defs>
+    </svg>
+    <svg style="position: absolute; opacity: 0;">
+      <rect id="secondPage" />
+      <rect id="firstPage" />
+      <rect id="thirdPage" />
+      <rect id="fourthPage" />
+      <rect id="fifthPage" />
+    </svg>
+
+    <div class="img">
+      <div class="img_scene img_moutain active" style="
+            background-image: url('https://img.freepik.com/free-photo/himalayas-moutain-nepal_44953-5.jpg?size=626&ext=jpg');
+          "></div>
+      <div class="img_scene img_sea" style="
+            background-image: url('https://i0.wp.com/rallisolicitors.co.uk//app/uploads/2016/04/shutterstock_400278007.jpg?resize=2880%2C1000&ssl=1');
+          "></div>
+      <div class="img_scene img_sky" style="
+            background-image: url('https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg');
+          "></div>
+      <div class="img_scene img_desert" style="
+            background-image: url('https://images.chinatimes.com/newsphoto/2019-08-20/900/20190820003454.jpg');
+          "></div>
+      <div class="img_scene img_deepsea" style="
+          background-image: url('https://cdn2.ettoday.net/images/1584/1584381.jpg');
+        "></div>
+      <div class="color_slides">
+        <div class="color_slide brown"></div>
+        <div class="color_slide blue"></div>
+        <div class="color_slide purple"></div>
+        <div class="color_slide yellow"></div>
+        <div class="color_slide deepblue"></div>
+      </div>
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <div class="buttons">
+      <button id="button_img_moutain" class="button active button_img_moutain">
+        Ginventory
+      </button>
+      <button id="button_img_sea" class="button button_img_sea">
+        VR Sessions
+      </button>
+      <button id="button_img_sky" class="button button_img_sky">
+        Le Voyagist
+      </button>
+      <button id="button_img_desert" class="button button_img_desert">
+        Riftworld
+      </button>
+      <button id="button_img_deepsea" class="button button_img_deepsea">
+        deeeeeepsea
+      </button>
+    </div>
+    <div class="titles">
+      <ul class="title">
+        <li><a href="">Ginventory</a></li>
+        <li><a href="">VR Sessions</a></li>
+        <li><a href="">Le Voyagist</a></li>
+        <li><a href="">Riftworld</a></li>
+        <li><a href="">Flexeorp</a></li>
+      </ul>
+    </div>
+  </section>
+  <section id="section2" class='section2'>
+    <svg style="position: absolute;width:100%;height:100%">
+      <defs>
+        <clipPath id="myClip2">
+          <rect x="15%" y="20%" width="70%" height="60%">
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="img2">
+      <div class="img_scene2 img_moutain2 active" style="
+            background-image: url('https://img.freepik.com/free-photo/himalayas-moutain-nepal_44953-5.jpg?size=626&ext=jpg');
+          "></div>
+      <div class="img_scene2 img_sea2 " style="
+            background-image: url('https://i0.wp.com/rallisolicitors.co.uk//app/uploads/2016/04/shutterstock_400278007.jpg?resize=2880%2C1000&ssl=1');
+          "></div>
+      <div class="img_scene2 img_sky2 " style="
+            background-image: url('https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg');
+          "></div>
+      <div class="img_scene2 img_desert2 " style="
+            background-image: url('https://images.chinatimes.com/newsphoto/2019-08-20/900/20190820003454.jpg');
+          "></div>
+      <div class="img_scene2 img_deepsea2 " style="
+          background-image: url('https://cdn2.ettoday.net/images/1584/1584381.jpg');
+        "></div>
+      <div class="color_slides2">
+        <div class="color_slide2 brown2"></div>
+        <div class="color_slide2 blue2"></div>
+        <div class="color_slide2 purple2"></div>
+        <div class="color_slide2 yellow2"></div>
+        <div class="color_slide2 deepblue2"></div>
+      </div>
+      <canvas id="myCanvas2"></canvas>
+
+    </div>
+    <div class="titles2">
+      <ul class="title2">
+        <li>Ginventory</li>
+        <li>VR Sessions</li>
+        <li>Le Voyagist</li>
+        <li>Riftworld</li>
+        <li>Flexeorp</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script>
+
+    ; (function () {
+      function change_img_deepsea() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:rgb(116, 116, 231) ");
+        img_deepsea.classList.add("active");
+        circle_color = "rgb(116, 116, 231) ";
+        fifthPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_deepblue.classList.add("active");
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_deepsea.classList.add("active");
+
+      }
+
+      function change_img_moutain() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:saddlebrown");
+        img_moutain.classList.add("active");
+        firstPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_brown.classList.add("active");
+        circle_color = "brown";
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move1");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_moutain.classList.add("active");
+      }
+
+      function change_img_sea() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:blue");
+        img_sea.classList.add("active");
+        secondPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_blue.classList.add("active");
+        circle_color = "blue";
+        title.classList.remove("move1");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move2");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_sea.classList.add("active");
+      }
+
+      function change_img_sky() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:purple");
+        img_sky.classList.add("active");
+        thirdPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_purple.classList.add("active");
+        circle_color = "purple";
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move4");
+        title.classList.add("move3");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_sky.classList.add("active");
+      }
+
+      function change_img_dessert() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:rgb(216, 184, 5);");
+        img_desert.classList.add("active");
+        fourthPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_yellow.classList.add("active");
+        circle_color = "yellow";
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.add("move4");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_desert.classList.add("active");
+      }
+
+      // 擷取圖片
+      let svg = document.querySelector("svg");
+      let img_scenes = document.querySelectorAll(".img_scene");
+      let img_moutain = document.querySelector(".img_moutain");
+      let img_sea = document.querySelector(".img_sea");
+      let img_sky = document.querySelector(".img_sky");
+      let img_desert = document.querySelector(".img_desert");
+      let img_deepsea = document.querySelector('.img_deepsea')
+      let color_slides = document.querySelectorAll(".color_slide");
+      let slide_brown = document.querySelector(".brown");
+      let slide_blue = document.querySelector(".blue");
+      let slide_purple = document.querySelector(".purple");
+      let slide_yellow = document.querySelector(".yellow");
+      let slide_deepblue = document.querySelector('.deepblue')
+      let title = document.querySelector(".titles");
+
+
+
+      // 擷取按鈕
+      let buttons = document.querySelectorAll(".button");
+      let button_moutain = document.querySelector(".button_img_moutain");
+      let button_sea = document.querySelector(".button_img_sea");
+
+      let button_sky = document.querySelector(".button_img_sky");
+      let button_desert = document.querySelector(".button_img_desert");
+      let button_deepsea = document.querySelector(".button_img_deepsea");
+
+
+
+
+      // 切換各圖片
+      button_moutain.addEventListener("click", change_img_moutain);
+      button_sea.addEventListener("click", change_img_sea);
+      button_sky.addEventListener("click", change_img_sky);
+      button_desert.addEventListener("click", change_img_dessert);
+      button_deepsea.addEventListener("click", change_img_deepsea);
+
+      //canvas
+      let width = document.body.clientWidth;
+      let height = document.body.offsetHeight;
+      let circle_color = "saddlebrown";
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      let mouse = {
+        x: 0,
+        y: 0,
+      };
+
+      window.addEventListener("mousemove", (event) => {
+        mouse.x = event.pageX;
+        mouse.y = event.pageY;
+      });
+
+      window.addEventListener('resize', resize);
+      function resize() {
+        width = document.body.clientWidth;
+        return width
+      }
+      window.addEventListener('resize', canvasWidth);
+      function canvasWidth() {
+        canvas.width = window.innerWidth;
+        return canvas.width
+      }
+
+      window.addEventListener('resize', canvasHeight);
+      function canvasHeight() {
+        canvas.height = window.innerHeight;
+        return canvas.height
+      }
+
+
+      function draw() {
+        //先清掉cvanvas目前繪製的圖形
+        ctx.clearRect(0, 0, canvasWidth(), canvasHeight());
+        ctx.beginPath();
+        ctx.arc(
+          resize() / 3.1 + mouse.x / 5,
+          height / 2.4 + mouse.y / 5,
+          250,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle = circle_color;
+        ctx.fill();
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+
+      //自動輪播
+      let counter = 0
+      let buttonsCount = buttons.length
+      // interval = window.setInterval(showNext, 3000);  // 設定循環
+      // 帶入目前要顯示第幾張圖 
+      let showCurrent = function () {
+        let itemToShow = Math.abs(counter % buttonsCount); // 取餘數才能無限循環
+        buttons[itemToShow].click();
+      };
+      function showNext() {
+        counter++; // 將 counter+1 指定下一張圖
+        showCurrent();
+      }
+      function showPrev() {
+        counter--; // 將 counter－1 指定上一張圖
+        showCurrent();
+      }
+    }());
+
+
+
+    ///max-width:960px
+    //擷取圖片
+    let section2 = document.querySelector('#section2')
+    let img_scene2 = document.querySelectorAll('.img_scene2')
+    let img2 = document.querySelector('.img2')
+    let img_moutain2 = document.querySelector(".img_moutain2");
+    let img_sea2 = document.querySelector(".img_sea2");
+    let img_sky2 = document.querySelector(".img_sky2");
+    let img_desert2 = document.querySelector(".img_desert2");
+    let img_deepsea2 = document.querySelector('.img_deepsea2');
+    let titles2 = document.querySelector('.titles2')
+    let color_slide2 = document.querySelectorAll('.color_slide2')
+
+
+
+
+    let mouse = { x: null, y: null };
+    let last_mouse = { x: null, y: null };
+    let distance_x; // 最後滑鼠x相差距離
+    let distance_y;// 最後滑鼠y相差距離
+    let current_page = 0
+
+
+
+
+
+    // 取得最後座標
+    section2.addEventListener('mousemove', function (e) {
+      last_mouse.x = e.clientX
+      last_mouse.y = e.clientY
+      // console.log(last_mouse);
+    })
+
+    //取得初始座標
+    section2.addEventListener('mousedown', function (e) {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    })
+
+
+
+    //mouseup
+    section2.addEventListener('mouseup', function () {
+      distance_x = last_mouse.x - mouse.x;
+      if (distance_x > 100) {
+        if (current_page <= 0) {
+          current_page = current_page + 5
+        }
+        current_page--;
+        img_scene2.forEach(img_scene => {
+          img_scene.classList.remove('active')
+        })
+        img_scene2[current_page].classList.add('active');
+      } else if (distance_x < 100) {
+        if (current_page >= 4) {
+          current_page = current_page - 5;
+        }
+        current_page++;
+        img_scene2.forEach(img_scene => {
+          img_scene.classList.remove('active')
+        })
+        img_scene2[current_page].classList.add('active')
+      }
+      //更換背景顏色,移動文字
+      if (current_page == 1) {
+        section2.classList.remove('brown')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('deepblue')
+        section2.classList.add('blue')
+        titles2.classList.remove("move0");
+        titles2.classList.remove("move2");
+        titles2.classList.remove("move3");
+        titles2.classList.remove("move4");
+        titles2.classList.add("move1");
+        circle_color = "blue";
+
+      }
+      if (current_page == 2) {
+        section2.classList.remove('brown')
+        section2.classList.remove('blue')
+        section2.classList.remove('yellow')
+        section2.classList.remove('deepblue')
+        section2.classList.add('pueple')
+        titles2.classList.remove("move0");
+        titles2.classList.remove("move1");
+        titles2.classList.remove("move3");
+        titles2.classList.remove("move4");
+        titles2.classList.add("move2");
+        circle_color = "rgb(110, 41, 110)";
+
+      }
+      if (current_page == 3) {
+        section2.classList.remove('brown')
+        section2.classList.remove('pueple')
+        section2.classList.remove('blue')
+        section2.classList.remove('deepblue')
+        section2.classList.add('yellow')
+        titles2.classList.remove("move0");
+        titles2.classList.remove("move2");
+        titles2.classList.remove("move1");
+        titles2.classList.remove("move4");
+        titles2.classList.add("move3");
+        circle_color = "rgb(240, 240, 26)";
+
+      }
+      if (current_page == 4) {
+        section2.classList.remove('brown')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('blue')
+        section2.classList.add('deepblue')
+        titles2.classList.remove("move0");
+        titles2.classList.remove("move2");
+        titles2.classList.remove("move3");
+        titles2.classList.remove("move1");
+        titles2.classList.add("move4");
+        circle_color = "rgb(23, 23, 119)";
+
+      }
+      if (current_page == 0) {
+        section2.classList.remove('blue')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('deepblue')
+        section2.classList.add('brown')
+        titles2.classList.remove("move1");
+        titles2.classList.remove("move2");
+        titles2.classList.remove("move3");
+        titles2.classList.remove("move4");
+        titles2.classList.add("move0");
+        circle_color = "saddlebrown";
+      }
+      color_slide2.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      color_slide2[current_page].classList.add("active");
+    })
+    //mouseup
+
+
+
+    //canvas
+    let width = document.body.clientWidth;
+    let height = document.body.offsetHeight;
+    let circle_color = "saddlebrown";
+    let canvas = document.getElementById("myCanvas2");
+    let ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    let mouse2 = {
+      x: 0,
+      y: 0,
+    };
+
+    window.addEventListener("mousemove", (event) => {
+      mouse2.x = event.pageX;
+      mouse2.y = event.pageY;
+    });
+
+    window.addEventListener('resize', resize);
+    function resize() {
+      width = document.body.clientWidth;
+      return width
+    }
+    window.addEventListener('resize', canvasWidth);
+    function canvasWidth() {
+      canvas.width = window.innerWidth;
+      return canvas.width
+    }
+
+    window.addEventListener('resize', canvasHeight);
+    function canvasHeight() {
+      canvas.height = window.innerHeight;
+      return canvas.height
+    }
+
+
+    function draw() {
+      //先清掉cvanvas目前繪製的圖形
+      ctx.clearRect(0, 0, canvasWidth(), canvasHeight());
+      ctx.beginPath();
+      ctx.arc(
+        resize() / 3.1 + mouse2.x / 5,
+        height / 2.4 + mouse2.y / 5,
+        50,
+        0,
+        Math.PI * 2
+      );
+      ctx.fillStyle = circle_color;
+      ctx.fill();
+      requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+
+
+  </script>
+</body>
+
+</html>

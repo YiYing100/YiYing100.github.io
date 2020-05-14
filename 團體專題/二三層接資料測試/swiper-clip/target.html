@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="target.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./99.main01.css">
+</head>
+
+<body>
+  <section id="section1">
+    <svg style="position: absolute;width:100%;height:100%">
+      <defs>
+        <clipPath id="myClip">
+          <rect x="44.5%" y="15%" width="33.5%" height="22%">
+            <animate attributeName="x" to="35.1%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="35%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="33.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="28.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27.2%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="39.8%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.3%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="33.1%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+          <rect x="28.5%" y="39.4%" width="31.5%" height="21%">
+            <animate attributeName="x" to="25.5%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="40.5%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="28.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="31.5%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="33.7%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="22%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="44.9%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="39.9%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.15%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+          <rect x="40%" y="63.6%" width="27%" height="21.3%">
+            <animate attributeName="x" to="50%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="30%" begin="fifthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="40%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="27%" begin="firstPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="44.5%" begin="secondPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="40%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="26.9%" begin="thirdPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="x" to="21.9%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+            <animate attributeName="width" to="38.2%" begin="fourthPage.click" dur="0.7s" fill="freeze" />
+          </rect>
+        </clipPath>
+      </defs>
+    </svg>
+    <svg style="position: absolute; opacity: 0;">
+      <rect id="secondPage" />
+      <rect id="firstPage" />
+      <rect id="thirdPage" />
+      <rect id="fourthPage" />
+      <rect id="fifthPage" />
+    </svg>
+
+    <div class="img">
+      <div class="img_scene img_moutain active" style="
+            background-image: url('https://img.freepik.com/free-photo/himalayas-moutain-nepal_44953-5.jpg?size=626&ext=jpg');
+          "></div>
+      <div class="img_scene img_sea" style="
+            background-image: url('https://i0.wp.com/rallisolicitors.co.uk//app/uploads/2016/04/shutterstock_400278007.jpg?resize=2880%2C1000&ssl=1');
+          "></div>
+      <div class="img_scene img_sky" style="
+            background-image: url('https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg');
+          "></div>
+      <div class="img_scene img_desert" style="
+            background-image: url('https://images.chinatimes.com/newsphoto/2019-08-20/900/20190820003454.jpg');
+          "></div>
+      <div class="img_scene img_deepsea" style="
+          background-image: url('https://cdn2.ettoday.net/images/1584/1584381.jpg');
+        "></div>
+      <div class="color_slides">
+        <div class="color_slide brown"></div>
+        <div class="color_slide blue"></div>
+        <div class="color_slide purple"></div>
+        <div class="color_slide yellow"></div>
+        <div class="color_slide deepblue"></div>
+      </div>
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <div class="buttons">
+      <button id="button_img_moutain" class="button active button_img_moutain">
+        Ginventory
+      </button>
+      <button id="button_img_sea" class="button button_img_sea">
+        VR Sessions
+      </button>
+      <button id="button_img_sky" class="button button_img_sky">
+        Le Voyagist
+      </button>
+      <button id="button_img_desert" class="button button_img_desert">
+        Riftworld
+      </button>
+      <button id="button_img_deepsea" class="button button_img_deepsea">
+        deeeeeepsea
+      </button>
+    </div>
+    <div class="titles">
+      <ul class="title">
+        <li class='box_temple'>Ginventory</li>
+        <li>VR Sessions</li>
+        <li>Le Voyagist</li>
+        <li>Riftworld</li>
+        <li>Flexeorp</li>
+      </ul>
+    </div>
+  </section>
+  <section id="section2" class='section2'>
+    <svg style="position: absolute;width:100%;height:100%">
+      <defs>
+        <clipPath id="myClip2">
+          <rect x="20%" y="20%" width="60%" height="60%">
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="img2">
+          <div class="img_scene2 img_moutain2 active" style="
+            background-image: url('https://img.freepik.com/free-photo/himalayas-moutain-nepal_44953-5.jpg?size=626&ext=jpg');
+          "></div>
+          <div class="img_scene2 img_sea2 " style="
+            background-image: url('https://i0.wp.com/rallisolicitors.co.uk//app/uploads/2016/04/shutterstock_400278007.jpg?resize=2880%2C1000&ssl=1');
+          "></div>
+          <div class="img_scene2 img_sky2 " style="
+            background-image: url('https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg');
+          "></div>
+          <div class="img_scene2 img_desert2 " style="
+            background-image: url('https://images.chinatimes.com/newsphoto/2019-08-20/900/20190820003454.jpg');
+          "></div>
+          <div class="img_scene2 img_deepsea2 " style="
+          background-image: url('https://cdn2.ettoday.net/images/1584/1584381.jpg');
+        "></div>
+    </div>
+  </section>
+
+  <!-- 串接資料 -->
+  <button type="button" class="btn btn-primary btn_temple" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl"  role="document">
+        <div class="modal-body">
+            <div class="raea">
+                <div class="toggle_box">
+                    <button type="button" class="close">
+                    <i class="far fa-times-circle fa-1x"></i>
+                    </button>
+                </div>
+                <div class="pic"></div>
+                <div class="left_box">
+                    <p>Flower Festival in Xinshe</p>
+                </div>
+                <div class="bottom_box">
+                    <div class="bo_left"><hr></div>
+                    <div class="bo_center">
+                        <div class="bo_box"></div>
+                    </div>
+                    <div class="bo_right">
+                        <p>● Xinshe ╳ <a href="http://www.zhujai.org.tw/">Read More</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="row no-gutters ">
+                        <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                                <div class="text" >    
+                                    <h1><b>慈濟宮</b></h1>
+                                    <p>慈濟宮是豐原最早的廟宇，在歲月的推移中，她見證歷史興替與朝代的更迭，也為葫蘆墩的歷史做最佳註解。豐原早期名為葫蘆墩，是因此地最早為平埔族葫蘆墩社所居住，又剛好地形上由大甲溪漂流沙所堆積成三個小土墩，遠處觀看形似葫蘆，漢人移民也以此來稱呼，著名的葫蘆墩圳流。清乾隆中葉有漳州人來此開墾，漢人進入墾拓而逐漸形成街市。<br>與其他古老媽祖廟相似，媽祖的香火由僧人與觀音菩薩信仰一同帶進來，當年廟宇是座北朝南，也就是面向今復興路方向，至於為何會轉向今日坐南朝北？史料上尚待研究。廟埕前終日唱戲或表演雜耍，可見得當時葫蘆墩熱鬧景象。乾隆年間的慈濟宮在岸裡社古文書上稱為「觀音亭」。</p>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                            <picture>
+                                <source media="(min-width: 992px)"
+                                srcset="./img/統一版照片-慈濟宮.jpg"/>
+                                <source media="(min-width: 750px)"
+                                srcset="./img/統一版照片-平板-慈濟宮.jpg"> 
+                                <source media="(min-width: 320px)"
+                                srcset="./img/統一版照片-手機-慈濟宮.jpg">
+                                <img class="img-fluid" src="./img/統一版照片-慈濟宮.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script>
+    ; (function () {
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })
+    
+    let btn_temple = document.querySelector('.btn_temple')
+    let box_temple= document.querySelector('.box_temple')
+    box_temple.addEventListener('click',function () {
+      btn_temple.click()
+    })
+    
+
+      function change_img_deepsea() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:rgb(116, 116, 231) ");
+        img_deepsea.classList.add("active");
+        circle_color = "rgb(116, 116, 231) ";
+        fifthPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_deepblue.classList.add("active");
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_deepsea.classList.add("active");
+
+      }
+
+      function change_img_moutain() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:saddlebrown");
+        img_moutain.classList.add("active");
+        firstPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_brown.classList.add("active");
+        circle_color = "brown";
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move1");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_moutain.classList.add("active");
+      }
+
+      function change_img_sea() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:blue");
+        img_sea.classList.add("active");
+        secondPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_blue.classList.add("active");
+        circle_color = "blue";
+        title.classList.remove("move1");
+        title.classList.remove("move3");
+        title.classList.remove("move4");
+        title.classList.add("move2");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_sea.classList.add("active");
+      }
+
+      function change_img_sky() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:purple");
+        img_sky.classList.add("active");
+        thirdPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_purple.classList.add("active");
+        circle_color = "purple";
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move4");
+        title.classList.add("move3");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_sky.classList.add("active");
+      }
+
+      function change_img_dessert() {
+        img_scenes.forEach((img_scene) => {
+          img_scene.classList.remove("active");
+        });
+        section1.setAttribute("style", "background-color:rgb(216, 184, 5);");
+        img_desert.classList.add("active");
+        fourthPage.dispatchEvent(new Event("click"));
+        color_slides.forEach((color_slide) => {
+          color_slide.classList.remove("active");
+        });
+        slide_yellow.classList.add("active");
+        circle_color = "yellow";
+        title.classList.remove("move1");
+        title.classList.remove("move2");
+        title.classList.remove("move3");
+        title.classList.add("move4");
+        title.classList.remove("move5");
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+        button_desert.classList.add("active");
+      }
+
+      // 擷取圖片
+      let svg = document.querySelector("svg");
+      let img_scenes = document.querySelectorAll(".img_scene");
+      let img_moutain = document.querySelector(".img_moutain");
+      let img_sea = document.querySelector(".img_sea");
+      let img_sky = document.querySelector(".img_sky");
+      let img_desert = document.querySelector(".img_desert");
+      let img_deepsea = document.querySelector('.img_deepsea')
+      let color_slides = document.querySelectorAll(".color_slide");
+      let slide_brown = document.querySelector(".brown");
+      let slide_blue = document.querySelector(".blue");
+      let slide_purple = document.querySelector(".purple");
+      let slide_yellow = document.querySelector(".yellow");
+      let slide_deepblue = document.querySelector('.deepblue')
+      let title = document.querySelector(".titles");
+
+
+
+      // 擷取按鈕
+      let buttons = document.querySelectorAll(".button");
+      let button_moutain = document.querySelector(".button_img_moutain");
+      let button_sea = document.querySelector(".button_img_sea");
+
+      let button_sky = document.querySelector(".button_img_sky");
+      let button_desert = document.querySelector(".button_img_desert");
+      let button_deepsea = document.querySelector(".button_img_deepsea");
+
+
+
+
+      // 切換各圖片
+      button_moutain.addEventListener("click", change_img_moutain);
+      button_sea.addEventListener("click", change_img_sea);
+      button_sky.addEventListener("click", change_img_sky);
+      button_desert.addEventListener("click", change_img_dessert);
+      button_deepsea.addEventListener("click", change_img_deepsea);
+
+      //canvas
+      let width = document.body.clientWidth;
+      let height = document.body.offsetHeight;
+      let circle_color = "saddlebrown";
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      let mouse = {
+        x: 0,
+        y: 0,
+      };
+
+      window.addEventListener("mousemove", (event) => {
+        mouse.x = event.pageX;
+        mouse.y = event.pageY;
+      });
+
+      window.addEventListener('resize', resize);
+      function resize() {
+        width = document.body.clientWidth;
+        return width
+      }
+      window.addEventListener('resize', canvasWidth);
+      function canvasWidth() {
+        canvas.width = window.innerWidth;
+        return canvas.width
+      }
+
+      window.addEventListener('resize', canvasHeight);
+      function canvasHeight() {
+        canvas.height = window.innerHeight;
+        return canvas.height
+      }
+
+
+      function draw() {
+        //先清掉cvanvas目前繪製的圖形
+        ctx.clearRect(0, 0, canvasWidth(), canvasHeight());
+        ctx.beginPath();
+        ctx.arc(
+          resize() / 3.1 + mouse.x / 5,
+          height / 2.4 + mouse.y / 5,
+          250,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle = circle_color;
+        ctx.fill();
+        requestAnimationFrame(draw);
+      }
+      requestAnimationFrame(draw);
+
+      //自動輪播
+      let counter = 0
+      let buttonsCount = buttons.length
+      // interval = window.setInterval(showNext, 3000);  // 設定循環
+      // 帶入目前要顯示第幾張圖 
+      let showCurrent = function () {
+        let itemToShow = Math.abs(counter % buttonsCount); // 取餘數才能無限循環
+        buttons[itemToShow].click();
+      };
+      function showNext() {
+        counter++; // 將 counter+1 指定下一張圖
+        showCurrent();
+      }
+      function showPrev() {
+        counter--; // 將 counter－1 指定上一張圖
+        showCurrent();
+      }
+    }());
+    
+    let section2 = document.querySelector('#section2')
+    let img_scene2 = document.querySelectorAll('.img_scene2')
+    let img2 = document.querySelector('.img2')
+    let img_moutain2 = document.querySelector(".img_moutain2");
+      let img_sea2 = document.querySelector(".img_sea2");
+      let img_sky2 = document.querySelector(".img_sky2");
+      let img_desert2 = document.querySelector(".img_desert2");
+      let img_deepsea2 = document.querySelector('.img_deepsea2')
+      let mouse={x:null , y:null};
+      let last_mouse={x:null , y:null };
+      let distance_x; // 最後滑鼠x相差距離
+      let distance_y;// 最後滑鼠y相差距離
+      let current_page = 0
+      
+      
+      // 取得最後座標
+      section2.addEventListener('mousemove',function(e) {
+        last_mouse.x = e.clientX
+        last_mouse.y = e.clientY
+        // console.log(last_mouse);
+      })
+
+      //取得初始座標
+      section2.addEventListener('mousedown',function (e) {
+      mouse.x= e.clientX;
+      mouse.y= e.clientY;
+    })
+
+      
+    section2.addEventListener('mouseup',function () {
+      distance_x = last_mouse.x - mouse.x;
+      if (distance_x>100){
+        if (current_page <= 0){
+          current_page = current_page + 5}
+        current_page--;
+        img_scene2.forEach(img_scene => {
+          img_scene.classList.remove('active')
+        })
+        img_scene2[current_page].classList.add('active');
+        
+
+      }else if (distance_x<100){
+        if (current_page >= 4){
+          current_page = current_page - 5;
+        }
+        current_page++;
+        img_scene2.forEach(img_scene => {
+          img_scene.classList.remove('active')
+        })
+        img_scene2[current_page].classList.add('active')
+        
+      }
+      //更換背景顏色
+      if (current_page == 1) {
+        section2.classList.remove('brown')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('deepblue')
+        section2.classList.add('blue')
+      }
+      if (current_page == 2) {
+        section2.classList.remove('brown')
+        section2.classList.remove('blue')
+        section2.classList.remove('yellow')
+        section2.classList.remove('deepblue')
+        section2.classList.add('pueple')
+      }
+      if (current_page == 3) {
+        section2.classList.remove('brown')
+        section2.classList.remove('pueple')
+        section2.classList.remove('blue')
+        section2.classList.remove('deepblue')
+        section2.classList.add('yellow')
+      }
+      if (current_page == 4) {
+        section2.classList.remove('brown')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('blue')
+        section2.classList.add('deepblue')
+      }
+      if (current_page == 0) {
+        section2.classList.remove('blue')
+        section2.classList.remove('yellow')
+        section2.classList.remove('pueple')
+        section2.classList.remove('deepblue')
+        section2.classList.add('brown')
+      }
+    })
+
+  </script>
+</body>
+
+</html>

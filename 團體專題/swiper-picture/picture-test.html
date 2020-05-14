@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+  <link rel="stylesheet" href="./css/picture.css">
+</head>
+
+<body>
+  <nav class="nav full">
+    <!-- 漢堡條 -->
+    <div class="ham_bar">
+      <div class="bar_line line1"></div>
+      <div class="bar_line line2"></div>
+      <div class="bar_line line3"></div>
+    </div>
+    <h1>Mountain town Ramble</h1>
+    <div class="list_item">
+      <ul>
+        <li data-item="1">首 &nbsp;頁</li>
+        <li data-item="2">慢 &nbsp;遊</li>
+        <li data-item="3">慢 &nbsp;活</li>
+        <li data-item="4">慢 &nbsp;食</li>
+      </ul>
+    </div>
+    <div class="nav_pic"></div>
+    <div class="nav_pic_text">Mountain town Ramble Read All</div>
+
+    <div class="nav_back"></div>
+  </nav>
+  <nav class="phone_nav">
+    <div class="phone_ham_bar">
+      <div class="phone_bar_line line1 "></div>
+      <div class="phone_bar_line line2 "></div>
+      <div class="phone_bar_line line3 "></div>
+    </div>
+    <div class="phone_list ">
+      <ul>
+        <li data-item="1">首 頁</li>
+        <li data-item="2">慢 遊</li>
+        <li data-item="3">慢 活</li>
+        <li data-item="4">慢 食</li>
+      </ul>
+
+      <h1>Mountain town Ramble</h1>
+      <div class="phone_nav_pic"></div>
+      <div class="nav_back"></div>
+    </div>
+  </nav>
+  <!-- <img src="./img/img2.png" alt=""> -->
+  <div id='content' class='content'>
+    <div class="swiper-container gallery-thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(./img/img1.png)">
+          <div class='thumb_content'>
+            <span class='sub_title'>幸福花海 慢活山城</span>
+            <br>
+            <h2>台中新社花海節</h2>
+            <br>
+            <span class='sub_title2'>Flower Festival in Xinshe</span>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(./img/img2.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/img3.jpg)"></div>
+        <div class="swiper-slide"
+          style="background-image:url(https://st4.depositphotos.com/4022475/23374/v/600/depositphotos_233746170-stock-video-young-woman-stroking-and-petting.jpg)">
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url(https://www.gannett-cdn.com/presto/2020/03/24/USAT/866ee04e-9c56-4f84-ada3-e0c0ea0c0fb3-XXX_FUN_SMARTPET_041814.JPG?crop=3734,2100,x0,y29&width=3200&height=1680&fit=bounds)">
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url(https://www.gannett-cdn.com/presto/2019/07/24/PWIL/b23065b7-c6be-47d0-b676-bb8e764b7231-072319_WIL_DOG_JC0379.jpg)">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container gallery-top">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(./img/img1.png)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/img2.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(./img/img3.jpg)"></div>
+        <div class="swiper-slide"
+          style="background-image:url(https://st4.depositphotos.com/4022475/23374/v/600/depositphotos_233746170-stock-video-young-woman-stroking-and-petting.jpg)">
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url(https://www.gannett-cdn.com/presto/2020/03/24/USAT/866ee04e-9c56-4f84-ada3-e0c0ea0c0fb3-XXX_FUN_SMARTPET_041814.JPG?crop=3734,2100,x0,y29&width=3200&height=1680&fit=bounds)">
+        </div>
+        <div class="swiper-slide"
+          style="background-image:url(https://www.gannett-cdn.com/presto/2019/07/24/PWIL/b23065b7-c6be-47d0-b676-bb8e764b7231-072319_WIL_DOG_JC0379.jpg)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background_img">
+  </div>
+
+
+
+
+
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 80,
+      slidesPerView: 6,
+      direction: 'vertical',
+      freeMode: true,
+      watchSlidesVisibility: true,
+      // slidesOffsetAfter:300,
+    });
+
+    var galleryTop = new Swiper('.gallery-top', {
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+      autoplay: {
+        delay: 1000
+      }, effect: 'fade'
+    });
+  </script>
+</body>
+
+</html>
