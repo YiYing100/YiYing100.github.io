@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/css/swiper.css"
+    /> -->
   <link rel="stylesheet" href="./css/picture.css">
 </head>
 
@@ -104,24 +108,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="./js/navbar.js"></script>
   <script>
+    let targetIndex;
     var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 80,
+      spaceBetween: 50,
       slidesPerView: 6,
       direction: 'vertical',
-      freeMode: true,
-      watchSlidesVisibility: true,
+      centeredSlides: true,
+      initialSlide:3,
+      autoplay: {
+        delay: 1000}, 
+      loop:true
+      // loop:true
       // slidesOffsetAfter:300,
     });
 
     var galleryTop = new Swiper('.gallery-top', {
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-      autoplay: {
-        delay: 1000
-      }, effect: 'fade'
+      effect: 'fade',
+      initialSlide:2
+      // loop:true
     });
+
+    galleryThumbs.on("slideChangeTransitionStart", function () {
+        targetIndex = Number(galleryThumbs.realIndex);
+        galleryThumbs.detachEvents();
+        galleryTop.slideTo(targetIndex, 700, true);
+        console.log(targetIndex);
+      })
+
+      galleryTop.on("slideChangeTransitionEnd", function () {
+        galleryThumbs.attachEvents();
+      });
   </script>
 </body>
-
 </html>

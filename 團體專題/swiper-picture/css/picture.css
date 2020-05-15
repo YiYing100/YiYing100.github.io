@@ -551,6 +551,10 @@ body {
   margin-left: 20px;
 }
 
+.content .gallery-thumbs .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
 .content .gallery-thumbs .swiper-slide {
   opacity: 0.3;
   border-radius: 100%;
