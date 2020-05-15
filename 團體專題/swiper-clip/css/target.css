@@ -649,8 +649,8 @@ body {
   right: 0%;
   top: 37.6%;
   width: 260vw;
-  -webkit-transform: translateX(65.6%);
-          transform: translateX(65.6%);
+  -webkit-transform: translateX(67.6%);
+          transform: translateX(67.6%);
   font-weight: bold;
   height: 5vh;
   font-family: '微軟正黑體';
@@ -673,8 +673,8 @@ body {
 }
 
 #section1 .titles.move1 {
-  -webkit-transform: translateX(65.6%);
-          transform: translateX(65.6%);
+  -webkit-transform: translateX(67.6%);
+          transform: translateX(67.6%);
   -webkit-transition: -webkit-transform 2s ease-in-out;
   transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
@@ -700,8 +700,8 @@ body {
 }
 
 #section1 .titles.move4 {
-  -webkit-transform: translateX(6.9%);
-          transform: translateX(6.9%);
+  -webkit-transform: translateX(13.9%);
+          transform: translateX(13.9%);
   -webkit-transition: -webkit-transform 2s ease-in-out;
   transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
