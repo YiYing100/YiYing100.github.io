@@ -19,47 +19,131 @@ body {
   height: 100vh;
   overflow: hidden;
 
+  .background_img {
+    background: url('../img/word1.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    // background-size: contain;
+    background-position: right;
+    ///重要
+    background-size: 39vw 46.5vw;
+    position: absolute;
+    right:-5px;
+    z-index: 2;
+    @media (max-width:1850px) {
+      right:-20px;
+    }
+    @media (max-width:1750px) {
+      right:-40px;
+    }
+    
+    @media (max-width:1600px) {
+      right:-60px;
+    }
+    @media (max-width:1500px) {
+      right:-80px;
+    }
+    @media (max-width:1500px) {
+      background-size: 36vw 45.5vw;
+      right:10px;
+    }
+    @media (max-width:1330px) {
+      right:-15px;
+    }
+    @media (max-width:1200px) {
+      background-size: 43vw 53.5vw;
+    }
+    @media (max-width:1050px) {
+      right:-25px;
+    }
+    @media (max-width:980px) {
+      right:-35px;
+
+    }
+    @media (max-width:830px) {
+      right:-50px;
+
+    }
+    @media (max-width:950px) {
+
+    }
+    @media (max-width:800px) {
+
+    }
+    @media (max-width:760px) {
+      display: none;
+    }
+  }
+
   .gallery-thumbs {
     height: 100vh;
     flex: 1;
     padding: 30px 30px;
     margin-left: 20px;
+    z-index:3;
+
 
     .swiper-slide.swiper-slide-active{
       opacity: 1;
+      transform: scale(1.5);
+     }
+    }
+
+    //顯示thumbs內容
+    .swiper-slide.swiper-slide-active .thumb_content {
+      opacity: 1;
+      transition:all 1s ease-in-out;
     }
 
     .swiper-slide {
       opacity: 0.3;
       border-radius: 100%;
-      width: 80px;
+      width: 90px;
       position: relative;
       .thumb_content {
-        display: none;
-        position: absolute;
-        left: 10vw;
+        opacity: 0;
+        position: relative;
+        left: 11vw;
+        bottom: 10px;
         width: 1000px;
+
+        @media (max-width:1500px){
+          left:15vw;
+          bottom:0px;
+        }
+        @media (max-width:992px){
+          left:15vw;
+          bottom:0px;
+          top:10px;
+        }
+        @media (max-width:760px){
+          left:25vw;
+        }
+
+        .sub_title {
+          position: relative;
+          left: 5px;
+          font-size: 5px;
+        }
+
         h2{
           margin: 0;
           padding: 0;
           font-size: 2.5vw;
           font-family: '微軟正黑體';
+
+          @media (max-width:760px){
+            font-size:4vw;
+          }
+          
         }
         .sub_title2 {
+          position: relative;
+          bottom: 15px;
+          left: 5px;
           color: rgb(139, 137, 137);
         }
       }
-    }
-
-    .swiper-slide-thumb-active {
-      opacity: 1;
-      transform: scale(1.6);
-      transition: transform 1s ease-in-out;
-      border: 2px solid yellow;
-    }
-    //顯示文字
-    .swiper-slide-thumb-active.swiper-slide .thumb_content {
-      display: block;
     }
   }
 
@@ -67,16 +151,27 @@ body {
     position: relative;
     right: -264px;
     flex: 1;
-    mask: url(../img/mask.png) no-repeat center left;
+    mask: url(../img/mask.png) no-repeat left;
     mask-mode: alpha;
-    mask-size: 65%;
+    mask-size: 67%;
+    @media (max-width:1500px) {
+      // mask-size:70%;
+      right:-200px;
+    }
+    @media (max-width:1200px) {
+      mask-size: 80%;
+      right:-110px;
+    }
+    @media (max-width:760px) {
+      display: none;
+    }
     
     .swiper-slide.swiper-slide-active {
       position: relative;
       animation:move 7s infinite;
     }
   }
-}
+
 
 .swiper-slide {
   background-size: cover;
@@ -90,15 +185,4 @@ body {
   100% {
     right: 100px;
   }
-}
-
-.background_img {
-  background: url('../img/word1.png') no-repeat center;
-  width: 60vw;
-  height: 95%;
-  background-size: contain;
-  position: absolute;
-  top: 3%;
-  left: 49.7%;
-  z-index: 2;
 }
