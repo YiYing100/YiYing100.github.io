@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body {
+        margin: 0;
+        background-color: #66ffe6;
+      }
+      .mask {
+        width: 100vw;
+        height: 60vh;
+        background: url(https://i.imgur.com/zC5DK6V.jpg) no-repeat top center /
+          cover;
+        -webkit-mask: url(https://i.imgur.com/v7DLV6l.png) no-repeat center
+          center / contain;
+        mask: url(https://i.imgur.com/v7DLV6l.png) no-repeat center center /
+          contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mask"></div>
+  </body>
+</html>

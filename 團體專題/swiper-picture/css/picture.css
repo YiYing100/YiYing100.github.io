@@ -556,6 +556,7 @@ body {
 @media (max-width: 1850px) {
   .content .background_img {
     right: -20px;
+    background-size: 36vw 45.5vw;
   }
 }
 
@@ -577,10 +578,9 @@ body {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
   .content .background_img {
-    background-size: 36vw 45.5vw;
-    right: 10px;
+    right: 5px;
   }
 }
 
@@ -706,35 +706,20 @@ body {
 
 .gallery-top {
   position: relative;
-  right: -264px;
+  right: -204px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-mask: url(../img/mask.png) no-repeat left;
-          mask: url(../img/mask.png) no-repeat left;
-  mask-mode: alpha;
-  -webkit-mask-size: 67%;
-          mask-size: 67%;
 }
 
-@media (max-width: 1500px) {
-  .gallery-top {
-    right: -200px;
-  }
+.gallery-top .swiper-wrapper {
+  position: relative;
+  right: 0px;
 }
 
-@media (max-width: 1200px) {
-  .gallery-top {
-    -webkit-mask-size: 80%;
-            mask-size: 80%;
-    right: -110px;
-  }
-}
-
-@media (max-width: 760px) {
-  .gallery-top {
-    display: none;
-  }
+.gallery-top .swiper-wrapper .swiper-slide {
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
 }
 
 .gallery-top .swiper-slide.swiper-slide-active {
@@ -753,7 +738,7 @@ body {
     right: 0px;
   }
   100% {
-    right: 100px;
+    right: 50px;
   }
 }
 
@@ -762,7 +747,7 @@ body {
     right: 0px;
   }
   100% {
-    right: 100px;
+    right: 50px;
   }
 }
 /*# sourceMappingURL=picture.css.map */
