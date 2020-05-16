@@ -668,23 +668,34 @@ body {
 .content .swiper-slide {
   opacity: 0.3;
   border-radius: 100%;
-  width: 110px;
+  width: 100px;
   position: relative;
+}
+
+@media (max-width: 576px) {
+  .content .swiper-slide {
+    width: 25vw;
+  }
+}
+
+@media (min-height: 1024px) {
+  .content .swiper-slide {
+    width: 15vw;
+  }
+}
+
+@media (min-height: 1365px) {
+  .content .swiper-slide {
+    width: 18vw;
+  }
 }
 
 .content .swiper-slide .thumb_content {
   opacity: 0;
   position: relative;
-  left: 11vw;
+  left: 10vw;
   bottom: 10px;
   width: 1000px;
-}
-
-@media (max-width: 1500px) {
-  .content .swiper-slide .thumb_content {
-    left: 15vw;
-    bottom: 0px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -701,10 +712,22 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  .content .swiper-slide .thumb_content {
+    left: 30vw;
+  }
+}
+
 .content .swiper-slide .thumb_content .sub_title {
   position: relative;
   left: 5px;
   font-size: 5px;
+}
+
+@media (max-width: 760px) {
+  .content .swiper-slide .thumb_content .sub_title {
+    font-size: 1vw;
+  }
 }
 
 .content .swiper-slide .thumb_content h2 {
@@ -717,6 +740,8 @@ body {
 @media (max-width: 760px) {
   .content .swiper-slide .thumb_content h2 {
     font-size: 4vw;
+    position: relative;
+    left: 5px;
   }
 }
 
@@ -725,6 +750,14 @@ body {
   bottom: 15px;
   left: 5px;
   color: #8b8989;
+  padding-bottom: 5px;
+  border-bottom: 3px solid yellow;
+}
+
+@media (max-width: 760px) {
+  .content .swiper-slide .thumb_content .sub_title2 {
+    font-size: 1vw;
+  }
 }
 
 .gallery-top {
@@ -792,6 +825,20 @@ body {
 
 @media (max-width: 800px) {
   .gallery-top .swiper-wrapper .swiper-slide {
+    -webkit-clip-path: circle(25% at 51% 50%);
+            clip-path: circle(25% at 51% 50%);
+  }
+}
+
+@media (min-height: 1024px) {
+  .gallery-top .swiper-wrapper {
+    -webkit-clip-path: circle(22% at 51% 50%);
+            clip-path: circle(22% at 51% 50%);
+  }
+}
+
+@media (min-height: 1365px) {
+  .gallery-top .swiper-wrapper {
     -webkit-clip-path: circle(25% at 51% 50%);
             clip-path: circle(25% at 51% 50%);
   }

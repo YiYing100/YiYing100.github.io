@@ -751,7 +751,7 @@ body {
 .color_slides .purple {
   width: 100%;
   height: 100%;
-  background-color: #f7c443;
+  background-color: #db9f05;
   position: absolute;
   -webkit-transform: translateX(-86%);
           transform: translateX(-86%);
@@ -779,7 +779,7 @@ body {
   .section2 {
     width: 100%;
     height: 100vh;
-    background-color: saddlebrown;
+    background-color: #1a6b75;
     overflow: hidden;
     position: relative;
   }
@@ -809,7 +809,7 @@ body {
   .section2 .img2 .color_slides2 .brown2 {
     width: 100%;
     height: 100%;
-    background-color: saddlebrown;
+    background-color: #1a6b75;
     position: absolute;
     -webkit-transform: translateX(-86%);
             transform: translateX(-86%);
@@ -817,7 +817,7 @@ body {
   .section2 .img2 .color_slides2 .blue2 {
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: #233557;
     position: absolute;
     -webkit-transform: translateX(-86%);
             transform: translateX(-86%);
@@ -825,7 +825,7 @@ body {
   .section2 .img2 .color_slides2 .purple2 {
     width: 100%;
     height: 100%;
-    background-color: purple;
+    background-color: #db9f05;
     position: absolute;
     -webkit-transform: translateX(-86%);
             transform: translateX(-86%);
@@ -833,7 +833,7 @@ body {
   .section2 .img2 .color_slides2 .yellow2 {
     width: 100%;
     height: 100%;
-    background-color: #d8b805;
+    background-color: #222746;
     position: absolute;
     -webkit-transform: translateX(-86%);
             transform: translateX(-86%);
@@ -841,7 +841,7 @@ body {
   .section2 .img2 .color_slides2 .deepblue2 {
     width: 100%;
     height: 100%;
-    background-color: #7474e7;
+    background-color: #3f8b78;
     position: absolute;
     -webkit-transform: translateX(-86%);
             transform: translateX(-86%);
@@ -857,8 +857,8 @@ body {
   .section2 .img2 .img_moutain2.active {
     opacity: 1;
     filter: Alpha(opacity=1);
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: -webkit-transform 2s ease-in-out;
     transition: -webkit-transform 2s ease-in-out;
     transition: transform 2s ease-in-out;
@@ -867,8 +867,8 @@ body {
   .section2 .img2 .img_sea2.active {
     opacity: 1;
     filter: Alpha(opacity=1);
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: -webkit-transform 2s ease-in-out;
     transition: -webkit-transform 2s ease-in-out;
     transition: transform 2s ease-in-out;
@@ -877,8 +877,8 @@ body {
   .section2 .img2 .img_sky2.active {
     opacity: 1;
     filter: Alpha(opacity=1);
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: -webkit-transform 2s ease-in-out;
     transition: -webkit-transform 2s ease-in-out;
     transition: transform 2s ease-in-out;
@@ -887,8 +887,8 @@ body {
   .section2 .img2 .img_desert2.active {
     opacity: 1;
     filter: Alpha(opacity=1);
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: -webkit-transform 2s ease-in-out;
     transition: -webkit-transform 2s ease-in-out;
     transition: transform 2s ease-in-out;
@@ -897,8 +897,8 @@ body {
   .section2 .img2 .img_deepsea2.active {
     opacity: 1;
     filter: Alpha(opacity=1);
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: -webkit-transform 2s ease-in-out;
     transition: -webkit-transform 2s ease-in-out;
     transition: transform 2s ease-in-out;
@@ -953,19 +953,19 @@ body {
     color: white;
   }
   .section2.brown {
-    background-color: saddlebrown;
+    background-color: #2494a3;
   }
   .section2.blue {
-    background-color: blue;
+    background-color: #314A78;
   }
   .section2.yellow {
-    background-color: #f0f01a;
+    background-color: #f7c443;
   }
   .section2.pueple {
-    background-color: #6e296e;
+    background-color: #2C325A;
   }
   .section2.deepblue {
-    background-color: #171777;
+    background-color: #56BDA3;
   }
 }
 /*# sourceMappingURL=target.css.map */

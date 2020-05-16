@@ -99,24 +99,31 @@ body {
     .swiper-slide.swiper-slide-active .thumb_content {
       opacity: 1;
       transition:all 1s ease-in-out;
+      
     }
 
     .swiper-slide {
       opacity: 0.3;
       border-radius: 100%;
-      width: 110px;
+      width: 100px;
       position: relative;
+
+      @media (max-width:576px){
+      width: 25vw;
+      }
+      @media (min-height:1024px){
+        width: 15vw;
+        }
+      @media (min-height:1365px){
+      width: 18vw;
+      }
       .thumb_content {
         opacity: 0;
         position: relative;
-        left: 11vw;
+        left: 10vw;
         bottom: 10px;
         width: 1000px;
 
-        @media (max-width:1500px){
-          left:15vw;
-          bottom:0px;
-        }
         @media (max-width:992px){
           left:15vw;
           bottom:0px;
@@ -125,11 +132,19 @@ body {
         @media (max-width:760px){
           left:25vw;
         }
+        @media (max-width:576px){
+          left:30vw;
+        }
+        
+
 
         .sub_title {
           position: relative;
           left: 5px;
           font-size: 5px;
+          @media (max-width:760px){
+            font-size:1vw;
+          }
         }
 
         h2{
@@ -137,9 +152,12 @@ body {
           padding: 0;
           font-size: 2.5vw;
           font-family: '微軟正黑體';
+          
 
           @media (max-width:760px){
             font-size:4vw;
+            position: relative;
+            left:5px
           }
 
         }
@@ -148,6 +166,11 @@ body {
           bottom: 15px;
           left: 5px;
           color: rgb(139, 137, 137);
+          padding-bottom:5px; 
+          border-bottom:3px solid yellow;
+          @media (max-width:760px){
+            font-size:1vw;
+          }
         }
       }
     }
@@ -188,6 +211,12 @@ body {
         @media (max-width:800px){
           clip-path: circle(25% at 51% 50%);
         }
+        }
+        @media (min-height:1024px){
+          clip-path: circle(22% at 51% 50%);
+        }
+        @media (min-height:1365px){
+          clip-path: circle(25% at 51% 50%);
       }
     }
     

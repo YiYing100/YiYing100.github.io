@@ -173,7 +173,7 @@ body {
   .purple {
     width: 100%;
     height: 100%;
-    background-color: #f7c443;
+    background-color: #db9f05;
     position: absolute;
     transform: translateX(-86%);
   }
@@ -198,7 +198,7 @@ body {
   .section2 {
     width: 100%;
     height: 100vh;
-    background-color: saddlebrown;
+    background-color: #1a6b75;
     overflow: hidden;
     position: relative;
 
@@ -227,35 +227,35 @@ body {
         .brown2 {
           width: 100%;
           height: 100%;
-          background-color: saddlebrown;
+          background-color: #1a6b75;
           position: absolute;
           transform: translateX(-86%);
         }
         .blue2 {
           width: 100%;
           height: 100%;
-          background-color: blue;
+          background-color: rgb(35, 53, 87);
           position: absolute;
           transform: translateX(-86%);
         }
         .purple2 {
           width: 100%;
           height: 100%;
-          background-color: purple;
+          background-color: #db9f05;
           position: absolute;
           transform: translateX(-86%);
         }
         .yellow2 {
           width: 100%;
           height: 100%;
-          background-color: rgb(216, 184, 5);
+          background-color: rgb(34, 39, 70);
           position: absolute;
           transform: translateX(-86%);
         }
         .deepblue2 {
           width: 100%;
           height: 100%;
-          background-color: rgb(116, 116, 231);
+          background-color: rgb(63, 139, 120);
           position: absolute;
           transform: translateX(-86%);
         }
@@ -272,33 +272,33 @@ body {
       .img_moutain2.active {
         opacity: 1;
         filter: Alpha(opacity=1);
-        transform: scale(1.5);
+        transform: scale(1.2);
         transition: transform 2s ease-in-out;
       }
       .img_sea2.active {
         opacity: 1;
         filter: Alpha(opacity=1);
-        transform: scale(1.5);
+        transform: scale(1.2);
         transition: transform 2s ease-in-out;
       }
 
       .img_sky2.active {
         opacity: 1;
         filter: Alpha(opacity=1);
-        transform: scale(1.5);
+        transform: scale(1.2);
         transition: transform 2s ease-in-out;
       }
 
       .img_desert2.active {
         opacity: 1;
         filter: Alpha(opacity=1);
-        transform: scale(1.5);
+        transform: scale(1.2);
         transition: transform 2s ease-in-out;
       }
       .img_deepsea2.active {
         opacity: 1;
         filter: Alpha(opacity=1);
-        transform: scale(1.5);
+        transform: scale(1.2);
         transition: transform 2s ease-in-out;
       }
     }
@@ -340,20 +340,20 @@ body {
   }
 
   .section2.brown {
-    background-color: saddlebrown;
+    background-color: #2494a3;
   }
   .section2.blue {
-    background-color: blue;
+    background-color: #314A78;
   }
 
   .section2.yellow {
-    background-color: rgb(240, 240, 26);
+    background-color: #f7c443;
   }
   .section2.pueple {
-    background-color: rgb(110, 41, 110);
+    background-color: #2C325A;
   }
   .section2.deepblue {
-    background-color: rgb(23, 23, 119);
+    background-color: #56BDA3;
   }
 
 }
