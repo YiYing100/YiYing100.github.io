@@ -1,0 +1,612 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  position: relative;
+}
+
+.modal-dialog {
+  max-width: 100vw;
+}
+
+.toggle_box {
+  position: absolute;
+  z-index: 1060;
+  margin: 20px 15px;
+  color: #404040;
+}
+
+@media screen and (max-width: 991px) {
+  .toggle_box {
+    margin-left: 93%;
+    margin-top: 10px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .toggle_box {
+    margin-left: 92%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .toggle_box {
+    margin-left: 91%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .toggle_box {
+    margin-left: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .toggle_box {
+    margin-left: 89%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .toggle_box {
+    margin-left: 88%;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .toggle_box {
+    margin-left: 87%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toggle_box {
+    margin-left: 86%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .toggle_box {
+    margin-left: 85%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .toggle_box {
+    margin-left: 84%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .toggle_box {
+    margin-left: 83%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .toggle_box {
+    margin-left: 82%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .toggle_box {
+    margin-left: 81%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .toggle_box {
+    margin-left: 80%;
+  }
+}
+
+.left_box {
+  position: absolute;
+  width: 30px;
+  height: 600px;
+  margin: 60px 15px;
+  z-index: 10;
+}
+
+.left_box p {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-family: '微軟正黑體';
+  font-size: 16px;
+  margin: 0;
+  color: #AAA;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 991px) {
+  .left_box {
+    display: none;
+  }
+}
+
+.pic {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 38%;
+  width: 150px;
+  height: 150px;
+  background-image: url(./img/山png0.png);
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1500px) {
+  .pic {
+    margin-left: 34%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .pic {
+    margin-top: 3%;
+    margin-left: 33%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .pic {
+    margin-left: 32%;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .pic {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .pic {
+    display: none;
+  }
+}
+
+.card .col-lg-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .col-lg-6 .text {
+  padding: 0 50px;
+  z-index: 11;
+}
+
+.card .col-12 {
+  width: 100%;
+}
+
+.card .col-12 .text {
+  width: 100%;
+  font-family: '新宋體';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: justify;
+  padding: 160px 150px;
+}
+
+.card .col-12 .text .small_up_title {
+  width: 100%;
+  font-size: 8px;
+  color: #AAA;
+  font-family: '新宋體';
+  word-spacing: 4px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.card .col-12 .text h1 {
+  letter-spacing: 15px;
+  width: 100%;
+  margin: 0;
+  margin-left: -2.5px;
+  font-family: '微軟正黑體';
+}
+
+@media screen and (max-width: 350px) {
+  .card .col-12 .text h1 {
+    letter-spacing: 2px;
+  }
+}
+
+.card .col-12 .text .small_bottom_en {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #AAA;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  font-family: '微軟正黑體';
+}
+
+@media screen and (max-width: 350px) {
+  .card .col-12 .text .small_bottom_en {
+    word-spacing: 2px;
+  }
+}
+
+.card .col-12 .text .small_bottom_title {
+  width: 100%;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+.card .col-12 .text .small_bottom_title .small_bottom_calendar {
+  width: 100%;
+  font-family: '新宋體';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .col-12 .text .small_bottom_title .small_bottom_calendar p {
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
+.card .col-12 .text .small_bottom_title .small_bottom_map {
+  width: 100%;
+  font-family: '新宋體';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .col-12 .text .small_bottom_title .small_bottom_map p {
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
+.card .col-12 .text .center_text {
+  width: 100%;
+  height: 350px;
+  overflow: auto;
+  letter-spacing: 5px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 991px) {
+  .card .col-12 .text .center_text {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card .col-12 .text .center_text {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .card .col-12 .text {
+    padding: 120px 80px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .card .col-12 .text {
+    padding: 50px 120px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card .col-12 .text {
+    padding: 60px 70px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card .col-12 .text {
+    padding: 50px 70px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card .col-12 .text {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card .col-12 .text {
+    padding: 40px 40px;
+  }
+}
+
+.bottom_box {
+  position: absolute;
+  bottom: 15px;
+  width: 1200px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1060;
+}
+
+@media screen and (max-width: 991px) {
+  .bottom_box {
+    bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bottom_box {
+    bottom: 1px;
+  }
+}
+
+.bottom_box .bo_left {
+  margin: 0;
+  width: 550px;
+  padding: 20px 0;
+}
+
+.bottom_box .bo_left .up_line {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid #AAA;
+}
+
+@media screen and (max-width: 1650px) {
+  .bottom_box .bo_left {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .bottom_box .bo_left {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .bottom_box .bo_left {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .bottom_box .bo_left {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .bottom_box .bo_left {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .bottom_box .bo_left {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .bottom_box .bo_left {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .bottom_box .bo_left {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bottom_box .bo_left {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .bottom_box .bo_left {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bottom_box .bo_left {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .bottom_box .bo_left {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .bottom_box .bo_left {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bottom_box .bo_left {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .bottom_box .bo_left {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .bottom_box .bo_left {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .bottom_box .bo_left {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .bottom_box .bo_left {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .bottom_box .bo_left {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bottom_box .bo_left {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .bottom_box .bo_left {
+    width: 45px;
+  }
+}
+
+.bottom_box .bottom_center {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottom_box .bottom_center .bo_center {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 45px;
+  height: 90px;
+  padding: 10px 0;
+  left: 50px;
+  border: black 1px solid;
+  border-radius: 0 100% 100% 0/50%;
+  border-left: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .bottom_box .bottom_center .bo_center {
+    width: 35px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bottom_box .bottom_center .bo_center {
+    width: 30px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .bottom_box .bottom_center .bo_center {
+    width: 25px;
+    height: 50px;
+  }
+}
+
+.bottom_box .bottom_center .bo_box {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url(./img/98-7-pc.jpg);
+  background-position: center;
+  background-size: cover;
+  right: 8px;
+}
+
+@media screen and (max-width: 991px) {
+  .bottom_box .bottom_center .bo_box {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bottom_box .bottom_center .bo_box {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .bottom_box .bottom_center .bo_box {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.bottom_box .bo_right {
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .bottom_box .bo_right {
+    margin-left: 10px;
+  }
+}
+
+.bottom_box .bo_right a {
+  background-color: #AAA;
+  color: white;
+  border-radius: 4px;
+}
+
+.bottom_box .bo_right p {
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=98-7.main.css.map */

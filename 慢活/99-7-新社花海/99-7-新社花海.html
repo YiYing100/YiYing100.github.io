@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./99-7.main.css">
+
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+    Launch demo modal
+  </button>
+  <!-- Modal -->
+  <div class="modal" id="exampleModal1" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+
+          <div class="raea">
+            <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+              <i class="far fa-times-circle fa-1x"></i>
+            </button>
+
+            <div class="pic"></div>
+            <div class="left_box">
+              <p>
+                Flower Festival in Xinshe</p>
+            </div>
+            <div class="bottom_box">
+              <div class="bo_left">
+                <div class="up_line"></div>
+                <div class="bottom_line"></div>
+              </div>
+              <div class="bottom_center">
+                <div class="bo_center"></div>
+                <div class="bo_box"></div>
+              </div>
+              <div class="bo_right">
+                <p>● Xinshe ╳ <a
+                    href="http://flowersea.tw/?lang=zh">Read
+                    More</a></p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="row no-gutters ">
+                <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                  <div class="text">
+                    <div class="small_up_title">
+                      幸福花海 慢活山城
+                    </div>
+                    <h1><b>新社花海</b></h1>
+                    <div class="small_bottom_en">
+                      Flower Festival in Xinshe
+                    </div>
+
+                    <div class="small_bottom_title">
+                      <div class="small_bottom_calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>時間：11月~12月</p>
+
+                      </div>
+                      <div class="small_bottom_map">
+                        <i class="fas fa-map-marker-alt">
+                          
+                        </i>
+                        <p>地點：台中新社區協興街30號</p>
+                      </div>
+                    </div>
+                    <div class="center_text">
+                      <p>
+                        每年約於11-12月間舉辦的「新社花海新社花海暨台中國際花毯節」為利用各式花卉與造景組合而成的大型花季盛會，面積廣達30公頃的花海是台中山城最受矚目的賞花活動。每年皆設定不同主題，各展區布置特色更是多元有趣，花海入口亦打造一座獨特的《星願紫風車》，讓民眾率先拍照打卡。除了有波斯菊、向日葵、太陽麻、高粱、小麥等多樣性景觀綠肥作物外，另闢精緻草花區，種植包括雞冠花、一串紅、彩葉草等多款草花，再搭配水池、石頭、草皮與花球等造景成為獨具魅力的花海景觀區。<br>
+                        近年來新社花海創新規劃《可食地景》，利用新社主要生產的蔬果、香菇打造裝置藝術，讓人耳目一新。活動同時集結「台中國際花毯節」、「中台灣農業博覽會」以大面積繽紛花海與台中市各區的農特產品，舉辦美食市集、秋日小旅行等活動，推廣有別於傳統印象的農村風貌，並貼心設置接駁車服務，讓民眾享受更加便利的新社花海之旅。<br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                  <picture>
+                    <source media="(min-width: 992px)" srcset="./img/99-7-PC33.jpg" />
+                    <source media="(min-width: 750px)" srcset="./img/99-7-Pad.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/99-7-phone.jpg">
+                    <img class="img-fluid" src="./img/99-7-PC33.jpg" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+
+    // $(document).ready(function () {
+    //   $(window).resize(function () {
+    //     var wdth = $(window).width();
+    //     $("span").text(wdth);
+    //     console.log(wdth);
+    //   });
+    // });
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -135,8 +135,6 @@ body {
         @media (max-width:576px){
           left:30vw;
         }
-        
-
 
         .sub_title {
           position: relative;
@@ -152,6 +150,7 @@ body {
           padding: 0;
           font-size: 2.5vw;
           font-family: '微軟正黑體';
+          cursor: pointer;
           
 
           @media (max-width:760px){
@@ -240,4 +239,8 @@ body {
   100% {
     right: 50px;
   }
+}
+
+.btn-primary{
+  display: none;
 }
