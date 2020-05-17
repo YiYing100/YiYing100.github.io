@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+.btn-primary {
+  display: none;
+}
+
 #section1 {
   background-color: #2494a3;
 
@@ -113,9 +117,10 @@ body {
       // width: 100vh;
       margin: auto 0;
 
-      a {
+      li {
         text-decoration: none;
         color: white;
+        cursor: pointer;
       }
     }
   }
