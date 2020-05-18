@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./97-5.main.css">
+
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+
+
+
+
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+
+          <div class="raea">
+            <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+              <i class="far fa-times-circle fa-1x"></i>
+            </button>
+
+            <div class="pic"></div>
+            <div class="left_box">
+              <p>
+                Master of Mushroom In Xinshe
+              </p>
+            </div>
+            <div class="bottom_box">
+              <div class="bo_left">
+                <div class="up_line"></div>
+                <div class="bottom_line"></div>
+              </div>
+              <div class="bottom_center">
+                <div class="bo_center"></div>
+                <div class="bo_box"></div>
+              </div>
+              <div class="bo_right">
+                <p>● Xinshe ╳ <a href="https://www.gs1688.com.tw/">Read
+                    More</a></p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="row no-gutters ">
+                <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                  <div class="text">
+                    <div class="small_up_title">
+                      養生之道 食在菇神
+                    </div>
+                    <h1><b>新社-菇神</b></h1>
+                    <div class="small_bottom_en">
+                      Master of Mushroom In Xinshe
+                    </div>
+
+                    <div class="small_bottom_title">
+                      <div class="small_bottom_calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>時間：AM11:00~PM21:00</p>
+
+                      </div>
+                      <div class="small_bottom_map">
+                        <i class="fas fa-map-marker-alt">
+
+                        </i>
+                        <p>地點：台中市新社區協成村協中街287號 </p>
+                      </div>
+                    </div>
+                    <div class="center_text">
+                      <p>
+                        菇神是一家以菇類為主題的火鍋餐廳，自2006年起在菇類的故鄉新社展店（新社菇類佔全國65％以上產值），以提供美味兼顧健康的菇類食品為目標。老闆以三代買賣香菇的經驗，精挑各地品質最好的菇類給消費者品嚐，多項商品更送至SGS與德國杜夫萊茵機構做自主檢驗。<br>
+
+                        除了享受菇類養生美食，菇神更設有門市，販售許多以菇為主題的商品，各種嚴選乾菇、菇類泡菜、菇餅乾、鮮蔬餅乾、各種醬料、百菇麵、香腸貢丸肉燥、百菇湯包、甚至各種菇主題的文具玩偶，好逛好買，滿足全家大小的需求。累積五年經驗製作的菇飲料—「玄耳」初採黑木耳露，與「好菇肉鬆」更多次榮獲台中市十大伴手禮首獎、最佳人氣獎、金口碑獎。
+                        <br>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                  <picture>
+                    <source media="(min-width: 992px)" srcset="./img/97-5-pc.jpg" />
+                    <source media="(min-width: 750px)" srcset="./img/97-5-pad.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/97-5-phone.jpg">
+                    <img class="img-fluid" src="./img/97-5-pc.jpg" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+
+    // $(document).ready(function () {
+    //   $(window).resize(function () {
+    //     var wdth = $(window).width();
+    //     $("span").text(wdth);
+    //     console.log(wdth);
+    //   });
+    // });
+
+
+
+  </script>
+
+</body>
+
+</html>

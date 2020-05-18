@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./97-4.main.css">
+
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+
+
+
+
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+
+          <div class="raea">
+            <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+              <i class="far fa-times-circle fa-1x"></i>
+            </button>
+
+            <div class="pic"></div>
+            <div class="left_box">
+              <p>
+                Niou Jia Juang In Dongshi
+              </p>
+            </div>
+            <div class="bottom_box">
+              <div class="bo_left">
+                <div class="up_line"></div>
+                <div class="bottom_line"></div>
+              </div>
+              <div class="bottom_center">
+                <div class="bo_center"></div>
+                <div class="bo_box"></div>
+              </div>
+              <div class="bo_right">
+                <p>● Dongshi ╳ <a href="http://www.nioujiajuang.com.tw/">Read
+                    More</a></p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="row no-gutters ">
+                <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                  <div class="text">
+                    <div class="small_up_title">
+                      客家料理 全牛大餐
+                    </div>
+                    <h1><b>東勢-牛稼莊</b></h1>
+                    <div class="small_bottom_en">
+                      Niou Jia Juang In Dongshi
+                    </div>
+
+                    <div class="small_bottom_title">
+                      <div class="small_bottom_calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>時間：AM11:00~PM20:00</p>
+
+                      </div>
+                      <div class="small_bottom_map">
+                        <i class="fas fa-map-marker-alt">
+
+                        </i>
+                        <p>地點：台中市東勢區新豐街7號 </p>
+                      </div>
+                    </div>
+                    <div class="center_text">
+                      <p>
+                        全牛大餐 客家料理 60年歷史<br>
+
+                        東勢牛稼莊成立於民國49年，創始人李雲淡先生累積了多年牛肉料理的經驗，深諳牛肉的各種料理手法讓牛肉所有可食用部位皆完美呈現出其絕妙滋味。<br>
+
+                        我們使用的牛肉都來自於大甲溪畔的黃牛
+                        牛群吃的是金門酒糟。現殺、現切、現煮
+                        提供顧客們最完整的全牛大餐。<br>
+
+                        光靠牛肉和內臟至少就能做出12道客家風味的料理，紅燒牛尾、紅燒牛筋、牛雜湯、涼拌牛肚、煎牛脾…等。<br>
+                        一道道讓人讚不絕口，「再來一碗白飯」是我們最常聽到客人說的話，吃了還想再吃！<br>
+
+                        而不吃牛肉的客人，也別擔心吃不到這麼美味的料理，因為我們東勢人是全台灣唯一的大埔腔客家人，道地的客家料理當然也少不了囉！
+                        <br>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                  <picture>
+                    <source media="(min-width: 992px)" srcset="./img/97-4-pc.jpg" />
+                    <source media="(min-width: 750px)" srcset="./img/97-4-pad.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/97-4-phone.jpg">
+                    <img class="img-fluid" src="./img/97-4-pc.jpg" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+
+    // $(document).ready(function () {
+    //   $(window).resize(function () {
+    //     var wdth = $(window).width();
+    //     $("span").text(wdth);
+    //     console.log(wdth);
+    //   });
+    // });
+
+
+
+  </script>
+
+</body>
+
+</html>
