@@ -20,6 +20,7 @@
         button.classList.remove("active");
       });
       button_moutain.classList.add("active");
+      clearInterval(interval);
     }
 
     function change_img_sea() {
@@ -43,6 +44,8 @@
         button.classList.remove("active");
       });
       button_sea.classList.add("active");
+      clearInterval(interval);
+
     }
 
     function change_img_sky() {
@@ -66,6 +69,8 @@
         button.classList.remove("active");
       });
       button_sky.classList.add("active");
+      clearInterval(interval);
+
     }
 
     function change_img_dessert() {
@@ -89,6 +94,8 @@
         button.classList.remove("active");
       });
       button_desert.classList.add("active");
+      clearInterval(interval);
+
     }
 
     function change_img_deepsea() {
@@ -112,6 +119,8 @@
         button.classList.remove("active");
       });
       button_deepsea.classList.add("active");
+      clearInterval(interval);
+
     }
 
     // 擷取圖片
@@ -204,21 +213,151 @@
     }
     requestAnimationFrame(draw);
 
+    let autoplay = document.querySelectorAll('.autoplay')
+    console.log(autoplay);
+    autoplay[0].addEventListener('click',autoplay0)
+    autoplay[1].addEventListener('click',autoplay1)
+    autoplay[2].addEventListener('click',autoplay2)
+    autoplay[3].addEventListener('click',autoplay3)
+    autoplay[4].addEventListener('click',autoplay4)
+    
+    
+    
     //自動輪播
     let counter = 0
     let buttonsCount = buttons.length
-    // interval = window.setInterval(showNext, 5000);  // 設定循環
+    interval = window.setInterval(showNext, 3000);  // 設定循環
+
     // 帶入目前要顯示第幾張圖 
     let showCurrent = function () {
       let itemToShow = Math.abs(counter % buttonsCount); // 取餘數才能無限循環
-      buttons[itemToShow].click();
+      autoplay[itemToShow].click();
     };
     function showNext() {
-      counter++; // 將 counter+1 指定下一張圖
+      counter++;
       showCurrent();
     }
     function showPrev() {
-      counter--; // 將 counter－1 指定上一張圖
+      counter--;
       showCurrent();
+    }
+
+    function autoplay0() {
+      img_scenes.forEach((img_scene) => {
+        img_scene.classList.remove("active");
+      });
+      section1.setAttribute("style", "background-color:#2494a3");
+      img_moutain.classList.add("active");
+      firstPage.dispatchEvent(new Event("click"));
+      color_slides.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      slide_brown.classList.add("active");
+      circle_color = "#2494a3";
+      title.classList.remove("move2");
+      title.classList.remove("move3");
+      title.classList.remove("move4");
+      title.classList.add("move1");
+      title.classList.remove("move5");
+      buttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button_moutain.classList.add("active");
+    }
+
+    function autoplay1() {
+      img_scenes.forEach((img_scene) => {
+        img_scene.classList.remove("active");
+      });
+      section1.setAttribute("style", "background-color:#314A78");
+      img_sea.classList.add("active");
+      secondPage.dispatchEvent(new Event("click"));
+      color_slides.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      slide_blue.classList.add("active");
+      circle_color = "#314A78";
+      title.classList.remove("move1");
+      title.classList.remove("move3");
+      title.classList.remove("move4");
+      title.classList.add("move2");
+      title.classList.remove("move5");
+      buttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button_sea.classList.add("active");
+
+    }
+
+    function autoplay2() {
+      img_scenes.forEach((img_scene) => {
+        img_scene.classList.remove("active");
+      });
+      section1.setAttribute("style", "background-color:#f7c443");
+      img_sky.classList.add("active");
+      thirdPage.dispatchEvent(new Event("click"));
+      color_slides.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      slide_purple.classList.add("active");
+      circle_color = "#f7c443";
+      title.classList.remove("move1");
+      title.classList.remove("move2");
+      title.classList.remove("move4");
+      title.classList.add("move3");
+      title.classList.remove("move5");
+      buttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button_sky.classList.add("active");
+
+    }
+
+    function autoplay3() {
+      img_scenes.forEach((img_scene) => {
+        img_scene.classList.remove("active");
+      });
+      section1.setAttribute("style", "background-color:#2C325A;");
+      img_desert.classList.add("active");
+      fourthPage.dispatchEvent(new Event("click"));
+      color_slides.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      slide_yellow.classList.add("active");
+      circle_color = "#2C325A";
+      title.classList.remove("move1");
+      title.classList.remove("move2");
+      title.classList.remove("move3");
+      title.classList.add("move4");
+      title.classList.remove("move5");
+      buttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button_desert.classList.add("active");
+
+    }
+
+    function autoplay4() {
+      img_scenes.forEach((img_scene) => {
+        img_scene.classList.remove("active");
+      });
+      section1.setAttribute("style", "background-color:#56BDA3");
+      img_deepsea.classList.add("active");
+      circle_color = "#56BDA3";
+      fifthPage.dispatchEvent(new Event("click"));
+      color_slides.forEach((color_slide) => {
+        color_slide.classList.remove("active");
+      });
+      slide_deepblue.classList.add("active");
+      title.classList.remove("move1");
+      title.classList.remove("move2");
+      title.classList.remove("move3");
+      title.classList.remove("move4");
+      title.classList.add("move5");
+      buttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+      button_deepsea.classList.add("active");
+
     }
   }());

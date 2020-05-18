@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/99-2.main.css">
-  <!-- <link rel="stylesheet" href="./css/99-4.main.css">
-  <link rel="stylesheet" href="./css/99-7.main.css"> -->
   <link rel="stylesheet" href="./css/target.css" />
 </head> 
 <body>
@@ -107,7 +105,7 @@
       <rect id="fourthPage" />
       <rect id="fifthPage" />
     </svg>
-    <!-- <img src="./img/東勢螢火蟲季.jfif" alt=""> -->
+
     <div class="img">
       <div class="img_scene img_moutain active" style="
             background-image: url('./img/丁粄節2.png');
@@ -159,6 +157,15 @@
         <li class='donshi_bug'>東勢螢火蟲季</li>
       </ul>
     </div>
+    <div class='autoplay_all'>
+      <ul>
+        <li class='autoplay'></li>
+        <li class='autoplay'></li>
+        <li class='autoplay'></li>
+        <li class='autoplay'></li>
+        <li class='autoplay'></li>
+      </ul>
+    </div>
   </section>
   <section id="section2" class='section2'>
     <svg style="position: absolute;width:100%;height:100%">
@@ -194,14 +201,22 @@
     </div>
     <div class="titles2">
       <ul class="title2">
-        <li>東勢新丁粄節</li>
-        <li>武陵櫻花祭</li>
-        <li>新社花海</li>
-        <li>谷關溫泉季</li>
-        <li>東勢螢火蟲季</li>
+        <li class='donshi_new2'>東勢新丁粄節</li>
+        <li class='wulin2'>武陵櫻花祭</li>
+        <li class='shinse2'>新社花海</li>
+        <li class='guguan2'>谷關溫泉季</li>
+        <li class='donshi_bug2'>東勢螢火蟲季</li>
       </ul>
     </div>
-
+    <div class='swiper_dots'>
+      <ul>
+        <li class='dot active'></li>
+        <li class='dot'></li>
+        <li class='dot'></li>
+        <li class='dot'></li>
+        <li class='dot'></li>
+      </ul>
+    </div>
   </section>
 
 <!-- 新丁粄 -->
@@ -652,15 +667,11 @@
 </div>
 <!-- 新社螢火蟲季 -->
 
-
-
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="./js/navbar.js"></script>
-  <script src="./js/swiper1.js"></script>
+  <script src="./js/swiper1_pc.js"></script>
+  <script src="./js/swiper1_phone.js"></script>
+  <script src="./js/swiper1_connect.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -668,235 +679,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script>
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
-    let donshi_new = document.querySelector('.donshi_new');
-    let wulin = document.querySelector('.wulin');
-    let shinse = document.querySelector('.shinse');
-    let guguan = document.querySelector('.guguan')
-    let donshi_bug = document.querySelector('.donshi_bug')
-
-    
-    let page1 = document.querySelector('.page1')
-    donshi_new.addEventListener('click',click_page1)
-    let page2 = document.querySelector('.page2')
-    wulin.addEventListener('click',click_page2)
-    let page3 = document.querySelector('.page3')
-    shinse.addEventListener('click',click_page3)
-    let page4 = document.querySelector('.page4')
-    guguan.addEventListener('click',click_page4)
-    let page5 = document.querySelector('.page5')
-    donshi_bug.addEventListener('click',click_page5)
-    
-    function click_page1() {
-      page1.click()
-    }
-    function click_page2() {
-      page2.click()
-    }
-    function click_page3() {
-      page3.click()
-    }
-    function click_page4() {
-      page4.click()
-    }
-    function click_page5() {
-      page5.click()
-    }
-    
-
-    
-    
-    ///max-width:960px
-    //擷取圖片
-    let section2 = document.querySelector('#section2')
-    let img_scene2 = document.querySelectorAll('.img_scene2')
-    let img2 = document.querySelector('.img2')
-    let img_moutain2 = document.querySelector(".img_moutain2");
-    let img_sea2 = document.querySelector(".img_sea2");
-    let img_sky2 = document.querySelector(".img_sky2");
-    let img_desert2 = document.querySelector(".img_desert2");
-    let img_deepsea2 = document.querySelector('.img_deepsea2');
-    let titles2 = document.querySelector('.titles2')
-    let color_slide2 = document.querySelectorAll('.color_slide2')
-
-    let mouse = { x: null, y: null };
-    let last_mouse = { x: null, y: null };
-    let distance_x; // 最後滑鼠x相差距離
-    let distance_y;// 最後滑鼠y相差距離
-    let current_page = 0
-
-    // 取得最後座標
-    section2.addEventListener('mousemove', function (e) {
-      last_mouse.x = e.clientX
-      last_mouse.y = e.clientY
-      // console.log(last_mouse);
-    })
-
-    //取得初始座標
-    section2.addEventListener('mousedown', function (e) {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    })
-
-    //mouseup
-    section2.addEventListener('mouseup', function () {
-      distance_x = last_mouse.x - mouse.x;
-      if (distance_x > 100) {
-        if (current_page <= 0) {
-          current_page = current_page + 5
-        }
-        current_page--;
-        img_scene2.forEach(img_scene => {
-          img_scene.classList.remove('active')
-        })
-        img_scene2[current_page].classList.add('active');
-      } else if (distance_x < 100) {
-        if (current_page >= 4) {
-          current_page = current_page - 5;
-        }
-        current_page++;
-        img_scene2.forEach(img_scene => {
-          img_scene.classList.remove('active')
-        })
-        img_scene2[current_page].classList.add('active')
-      }
-      //更換背景顏色,移動文字
-      if (current_page == 1) {
-        section2.classList.remove('brown')
-        section2.classList.remove('yellow')
-        section2.classList.remove('pueple')
-        section2.classList.remove('deepblue')
-        section2.classList.add('blue')
-        titles2.classList.remove("move0");
-        titles2.classList.remove("move2");
-        titles2.classList.remove("move3");
-        titles2.classList.remove("move4");
-        titles2.classList.add("move1");
-        circle_color = "blue";
-
-      }
-      if (current_page == 2) {
-        section2.classList.remove('brown')
-        section2.classList.remove('blue')
-        section2.classList.remove('purple')
-        section2.classList.remove('deepblue')
-        section2.classList.add('yellow')
-        titles2.classList.remove("move0");
-        titles2.classList.remove("move1");
-        titles2.classList.remove("move3");
-        titles2.classList.remove("move4");
-        titles2.classList.add("move2");
-        circle_color = "rgb(110, 41, 110)";
-
-      }
-      if (current_page == 3) {
-        section2.classList.remove('brown')
-        section2.classList.remove('yellow')
-        section2.classList.remove('blue')
-        section2.classList.remove('deepblue')
-        section2.classList.add('pueple')
-        titles2.classList.remove("move0");
-        titles2.classList.remove("move2");
-        titles2.classList.remove("move1");
-        titles2.classList.remove("move4");
-        titles2.classList.add("move3");
-        circle_color = "rgb(240, 240, 26)";
-
-      }
-      if (current_page == 4) {
-        section2.classList.remove('brown')
-        section2.classList.remove('yellow')
-        section2.classList.remove('pueple')
-        section2.classList.remove('blue')
-        section2.classList.add('deepblue')
-        titles2.classList.remove("move0");
-        titles2.classList.remove("move2");
-        titles2.classList.remove("move3");
-        titles2.classList.remove("move1");
-        titles2.classList.add("move4");
-        circle_color = "rgb(23, 23, 119)";
-
-      }
-      if (current_page == 0) {
-        section2.classList.remove('blue')
-        section2.classList.remove('yellow')
-        section2.classList.remove('pueple')
-        section2.classList.remove('deepblue')
-        section2.classList.add('brown')
-        titles2.classList.remove("move1");
-        titles2.classList.remove("move2");
-        titles2.classList.remove("move3");
-        titles2.classList.remove("move4");
-        titles2.classList.add("move0");
-        circle_color = "saddlebrown";
-      }
-      color_slide2.forEach((color_slide) => {
-        color_slide.classList.remove("active");
-      });
-      color_slide2[current_page].classList.add("active");
-    })
-    //mouseup
-
-
-
-    //canvas
-    let width = document.body.clientWidth;
-    let height = document.body.offsetHeight;
-    let circle_color = "saddlebrown";
-    let canvas = document.getElementById("myCanvas2");
-    let ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-    let mouse2 = {
-      x: 0,
-      y: 0,
-    };
-
-    window.addEventListener("mousemove", (event) => {
-      mouse2.x = event.pageX;
-      mouse2.y = event.pageY;
-    });
-
-    window.addEventListener('resize', resize);
-    function resize() {
-      width = document.body.clientWidth;
-      return width
-    }
-    window.addEventListener('resize', canvasWidth);
-    function canvasWidth() {
-      canvas.width = window.innerWidth;
-      return canvas.width
-    }
-
-    window.addEventListener('resize', canvasHeight);
-    function canvasHeight() {
-      canvas.height = window.innerHeight;
-      return canvas.height
-    }
-
-
-    function draw() {
-      //先清掉cvanvas目前繪製的圖形
-      ctx.clearRect(0, 0, canvasWidth(), canvasHeight());
-      ctx.beginPath();
-      ctx.arc(
-        resize() / 3.1 + mouse2.x / 5,
-        height / 2.4 + mouse2.y / 5,
-        50,
-        0,
-        Math.PI * 2
-      );
-      ctx.fillStyle = circle_color;
-      ctx.fill();
-      requestAnimationFrame(draw);
-    }
-    requestAnimationFrame(draw);
-
-
-  </script>
 </body>
-
 </html>

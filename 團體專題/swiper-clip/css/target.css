@@ -780,6 +780,10 @@ body {
           transform: translateX(-86%);
 }
 
+.color_slides .autoplay_all {
+  display: none;
+}
+
 @media (max-width: 960px) {
   .section2 {
     width: 100%;
@@ -911,8 +915,8 @@ body {
   }
   .section2 .titles2 {
     position: absolute;
-    left: 8.5%;
-    top: 30%;
+    left: -2%;
+    top: 40%;
   }
   .section2 .titles2.move0 {
     -webkit-transform: translateX(0%);
@@ -927,20 +931,20 @@ body {
     transition: 2s ease-in-out;
   }
   .section2 .titles2.move2 {
-    -webkit-transform: translateX(-40%);
-            transform: translateX(-40%);
+    -webkit-transform: translateX(-36.7%);
+            transform: translateX(-36.7%);
     -webkit-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
   }
   .section2 .titles2.move3 {
-    -webkit-transform: translateX(-60%);
-            transform: translateX(-60%);
+    -webkit-transform: translateX(-53.5%);
+            transform: translateX(-53.5%);
     -webkit-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
   }
   .section2 .titles2.move4 {
-    -webkit-transform: translateX(-76%);
-            transform: translateX(-76%);
+    -webkit-transform: translateX(-73%);
+            transform: translateX(-73%);
     -webkit-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
   }
@@ -954,8 +958,34 @@ body {
             justify-content: space-evenly;
     font-size: 10vw;
     font-weight: bold;
-    width: 310vw;
+    width: 360vw;
     color: white;
+    cursor: pointer;
+  }
+  .section2 .swiper_dots {
+    position: absolute;
+    top: 600px;
+    left: 170px;
+  }
+  .section2 .swiper_dots ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 300px;
+  }
+  .section2 .swiper_dots ul .dot {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  .section2 .swiper_dots ul .dot.active {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   .section2.brown {
     background-color: #2494a3;
