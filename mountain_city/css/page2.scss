@@ -1,0 +1,23 @@
+@import "_style-guild.scss";
+@import "_navbar.scss";
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    background-color: #999;
+}
+.home {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: $bk_home;
+}
+
+.container {
+    position: absolute;
+    left: 98px;
+    right: 0;
+    top: 134px;
+    bottom: 80px;
+    background-color: $bk_home_container;
+}

@@ -1,0 +1,138 @@
+body {
+    width: 100vw;
+    overflow: hidden;
+    width: 100ww;
+    height: 100vh;
+}
+/* .home {
+    width: 100ww;
+    height: 100vh;
+    position: relative;
+    background-color: #ddd;
+} */
+
+
+nav {
+    position: absolute;
+    width: 55px;
+    height: 100%;
+    background-color: gray;
+    right: 0;
+    z-index: 10;
+    transition-duration: 1s ;
+    transition-timing-function: cubic-bezier(.35,-0.31,.63,1.3);
+
+}
+nav.open {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background-color: gray;
+    right: 0;
+    z-index: 10;
+}
+
+nav.full {
+    transition-timing-function: cubic-bezier(.36,.27,.68,1.3);
+    width: 105%;
+}
+
+nav ul {
+    position: absolute;
+    left: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul li{
+    width: 100px;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
+    color: #fff;
+    position: relative;
+}
+
+nav ul li::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-bottom: 2px #fff solid;
+    transform: translateY(-10px);
+    transition-duration: 0.6s;
+}
+
+/* 漢堡條 */
+.ham_bar {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+.ham_bar.hide {
+    display: none;
+}
+
+.ham_bar .bar_line{
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 0.2s;
+}
+
+.bar_line.line1{
+    top: 30%;
+}
+.bar_line.line3{
+    top: 70%;
+}      
+
+.ham_bar:hover .line1 {
+    top: 25%;
+}
+
+.ham_bar:hover .line3 {
+    top: 75%;
+}
+
+nav h1 {
+    width: 300px;
+    position: absolute;
+    transform-origin: 0 100%;
+    top: 55%;
+    transform: rotateZ(90deg) translateY(-20px) ;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+nav .nav_back {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    left: 21px;
+    color: #fff;
+    display: none;
+}
+nav .nav_back.show{   
+    display: inline-block;
+}
+
+nav ul li:hover::after{    
+    left: 0%;
+    right: 0%;    
+}
