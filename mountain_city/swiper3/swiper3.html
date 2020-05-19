@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <!-- 第三層 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/97-1.main.css">
+  <!-- 第三層 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <nav class="nav full">
+    <!-- 漢堡條 -->
+    <div class="ham_bar">
+      <div class="bar_line line1"></div>
+      <div class="bar_line line2"></div>
+      <div class="bar_line line3"></div>
+    </div>
+    <h1>Mountain town Ramble</h1>
+    <div class="list_item">
+      <ul>
+        <li data-item="1">首 &nbsp;頁</li>
+        <li data-item="2">慢 &nbsp;遊</li>
+        <li data-item="3">慢 &nbsp;活</li>
+        <li data-item="4">慢 &nbsp;食</li>
+      </ul>
+    </div>
+    <div class="nav_pic"></div>
+    <div class="nav_pic_text">Mountain town Ramble Read All</div>
+
+    <div class="nav_back"></div>
+  </nav>
+  <nav class="phone_nav">
+    <div class="phone_ham_bar">
+      <div class="phone_bar_line line1 "></div>
+      <div class="phone_bar_line line2 "></div>
+      <div class="phone_bar_line line3 "></div>
+    </div>
+    <div class="phone_list ">
+      <ul>
+        <li data-item="1">首 頁</li>
+        <li data-item="2">慢 遊</li>
+        <li data-item="3">慢 活</li>
+        <li data-item="4">慢 食</li>
+      </ul>
+
+      <h1>Mountain town Ramble</h1>
+      <div class="phone_nav_pic"></div>
+      <div class="nav_back"></div>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <div class="background">
+    </div>
+    <div class="background_img" style='background-image: url(./img/慢食.png);'>
+    </div>
+    <div class="item-bg"></div>
+    <div class="news-slider">
+      <div class="news-slider__wrp swiper-wrapper">
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+            <div class="news__title">
+              石岡-石山丘的三十光陰
+            </div>
+            <p class="news__txt">
+              軟綿細緻有沉重感的吐司專賣店
+              位於台中東邊的山城石岡的一處小角落，認真踏實的做出一個屬於自己簡單但有內在的Totsukasa，是我們的小小夢想，更希望藉由totsukasa來跟好朋友們來個小小溫暖互動。
+            </p>
+
+            <div class="news__img">
+              <img src="./img/石山丘.jpg" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+
+            <div class="news__title">
+              白冷冰棒
+            </div>
+
+            <p class="news__txt">
+              清涼好去處
+
+              大甲溪發電廠員工消費合作社，自產枝仔冰，衛生可口，生產製程中採用，經沉積過濾的山泉水煮沸後再製成冰棒。
+
+              口味有: 清冰、紹興桂圓糯米、巧克力、酸梅、百香果…等多達14種口味，其中五葉松汁枝仔冰更是本店獨創!
+
+
+            </p>
+
+            <div class="news__img">
+              <img src="./img/白冷冰棒.jpg" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+
+            <div class="news__title">
+              東勢-牛稼莊
+            </div>
+
+            <p class="news__txt">
+              全牛大餐 客家料理 60年歷史
+              東勢牛稼莊成立於民國49年
+              創始人李雲淡先生累積了多年牛肉料理的經驗，
+              深諳牛肉的各種料理手法，
+              讓牛肉所有可食用部位皆完美呈現出其絕妙滋味。
+            </p>
+
+            <div class="news__img">
+              <img src="./img/牛家莊.jpg" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+
+            <div class="news__title">
+              新社-菇神
+            </div>
+
+            <p class="news__txt">
+              滿滿的菇盛宴 養生火鍋
+              菇神是一家以菇類為主題的火鍋餐廳，自2006年起在菇類的故鄉新社展店（新社菇類佔全國65％以上產值），以提供美味兼顧健康的菇類食品為目標。老闆以三代買賣香菇的經驗，精挑各地品質最好的菇類給消費者品嚐
+            </p>
+
+            <div class="news__img">
+              <img src="./img/菇神.jpg" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+
+            <div class="news__title">
+              康康豬豬血湯
+            </div>
+
+            <p class="news__txt">
+
+              豐原人的傳統早餐，炒麵界的經濟奇蹟。
+
+              康康豬，是豐原最有名的炒麵豬血湯店家，炒麵豬血湯是台中滿常見的早餐組合。
+              炒麵Q彈帶點麵芯的口感，淋上肉燥，簡單不失好吃的味道。
+              豬血湯是大骨熬成的湯頭，加上豬血紮實中又不失軟嫩的口感。
+
+            </p>
+
+            <div class="news__img">
+              <img src="./img/康康豬.jpg" />
+            </div>
+          </a>
+        </div>
+
+        <div class="news-slider__item swiper-slide third_content">
+          <a href="#" class="news__item">
+            <div class="news__title">
+              豐原排骨麵
+            </div>
+            <p class="news__txt">
+
+              在地人推薦的排骨麵，用餐環境寬敞舒適。
+              湯頭佳、麵順口。
+              肉質鬆軟，油而不膩。
+              親民價位，能夠吃飽。
+              傳統風格，人聲鼎沸 。
+              在地滋味，冬天適合。
+            </p>
+
+            <div class="news__img">
+              <img src="./img/豐原排骨麵.jpg" />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="news-slider__ctr">
+        <div class="news-slider__arrows">
+          <button class="news-slider__arrow news-slider-prev">
+            <span class="icon-font">
+              <svg class="icon icon-arrow-left">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </span>
+          </button>
+          <button class="news-slider__arrow news-slider-next">
+            <span class="icon-font">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="news-slider__pagination"></div>
+      </div>
+    </div>
+  </div>
+  <svg hidden="hidden">
+    <defs>
+      <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+        <title>arrow-left</title>
+        <path
+          d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+        <title>arrow-right</title>
+        <path
+          d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+  <div class='backgroundImg_eat' style="background-image: url(./img/食.png);"></div>
+  
+  <!-- 石山丘 -->
+  <button type="button" class="btn btn-primary third_6" data-toggle="modal" data-target="#exampleModal6">
+    Launch demo modal
+  </button>
+  <div class="modal" id="exampleModal6" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+
+          <div class="raea">
+            <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+              <i class="far fa-times-circle fa-1x"></i>
+            </button>
+
+            <div class="pic"></div>
+            <div class="left_box">
+              <p>
+                Boulangerie In Ishioka
+              </p>
+            </div>
+            <div class="bottom_box">
+              <div class="bo_left">
+                <div class="up_line"></div>
+                <div class="bottom_line"></div>
+              </div>
+              <div class="bottom_center">
+                <div class="bo_center"></div>
+                <div class="bo_box" style="background-image: url(./img/97-1-pc.jpg);"></div>
+              </div>
+              <div class="bo_right">
+                <p>● Ishioka ╳ <a href="https://www.facebook.com/sky6226/">Read
+                    More</a></p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="row no-gutters ">
+                <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                  <div class="text">
+                    <div class="small_up_title">
+                      手感烘焙 軟綿細緻
+                    </div>
+                    <h1><b>石山丘的三十光陰</b></h1>
+                    <div class="small_bottom_en">
+                      Boulangerie In Ishioka
+                    </div>
+
+                    <div class="small_bottom_title">
+                      <div class="small_bottom_calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>時間：AM09:00~PM19:30(星期三公休)</p>
+
+                      </div>
+                      <div class="small_bottom_map">
+                        <i class="fas fa-map-marker-alt">
+
+                        </i>
+                        <p>地點：台中市石岡區大仁街10號</p>
+                      </div>
+                    </div>
+                    <div class="center_text">
+                      <p>
+                        「石山丘的三十光陰」一間藏身在台中市石岡山上的手作吐司專賣店，位在石岡的大仁街上，是間當地人、遊客甚至是媒體都推薦的知名麵包店！<br>
+                        主廚劉光勝對於食材原料有著相當的堅持，店裡牆面可以看到所有食材來源介紹、也會看到當日所使用的日本北海道麵粉，結合台灣在地的優質食材，研發出相當獨特的風味特色，像是主廚推薦的紅寶石吐司，運用了花蓮天禾玉紅寶石米以及四種起司，高含水的配方讓紅米的甘甜韻味完全釋放，同時也正是因為含水率高，讓吐司濕潤柔軟，散發北海道小麥香氣，是台灣人相當喜歡的口感。<br>
+                        將美味吐司帶來石岡的劉光勝師傅，是石岡在地人，在日本北海道研習多年烘焙手藝回台開店，對於北海道的物產相當暸解，回台之後，也堅持使用高品質的優質食材，才能體現出不同於一般烘焙店的好味道。<br>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                  <picture>
+                    <source media="(min-width: 992px)" srcset="./img/97-1-pc.jpg" />
+                    <source media="(min-width: 750px)" srcset="./img/97-1-pad.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/97-1-phone.jpg">
+                    <img class="img-fluid" src="./img/97-1-pc.jpg" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 石山丘 -->
+
+ <!-- 白冷冰棒 -->
+  <button type="button" class="btn btn-primary third_7" data-toggle="modal" data-target="#exampleModal7">
+    Launch demo modal
+  </button>
+  <div class="modal" id="exampleModal7" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+
+          <div class="raea">
+            <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+              <i class="far fa-times-circle fa-1x"></i>
+            </button>
+
+            <div class="pic"></div>
+            <div class="left_box">
+              <p>
+                White Cold Popsicle In Peace
+              </p>
+            </div>
+            <div class="bottom_box">
+              <div class="bo_left">
+                <div class="up_line"></div>
+                <div class="bottom_line"></div>
+              </div>
+              <div class="bottom_center">
+                <div class="bo_center"></div>
+                <div class="bo_box" style="background-image: url(./img/97-2-pc.jpg);"></div>
+              </div>
+              <div class="bo_right">
+                <p>● Peace ╳ <a href="https://sites.google.com/view/djcice/%E9%A6%96%E9%A0%81">Read
+                    More</a></p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="row no-gutters ">
+                <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                  <div class="text">
+                    <div class="small_up_title">
+                      純淨山泉水 口味甘醇獨特
+                    </div>
+                    <h1><b>白冷冰棒</b></h1>
+                    <div class="small_bottom_en">
+                      White Cold Popsicle In Peace
+                    </div>
+
+                    <div class="small_bottom_title">
+                      <div class="small_bottom_calendar">
+                        <i class="far fa-calendar-alt"></i>
+                        <p>時間：AM08:00~PM17:00</p>
+
+                      </div>
+                      <div class="small_bottom_map">
+                        <i class="fas fa-map-marker-alt">
+
+                        </i>
+                        <p>地點：台中市和平區天輪里東關路二段91號</p>
+                      </div>
+                    </div>
+                    <div class="center_text">
+                      <p>
+                        從東勢或新社往(中橫)谷關溫泉區方向，行經台電-大甲溪發電廠(東關路二段)會看到右手邊；寫著『白冷冰棒』大大字樣的看板(附設停車場)<br>
+                        這幾乎是旅人們前往『谷關溫泉區』旅行或回程；必停的補給站，更是鐵馬族、騎腳踏車到谷關的中途休憩站(附設~休憩小屋&鐵馬簡易維修工具箱)<br>
+                        大甲溪發電廠員工消費合作社，自產枝仔冰，衛生可口，生產製程中採用，經沉積過濾的山泉水煮沸後再製成冰棒。<br>
+
+                        口味有: 清冰、紹興桂圓糯米、巧克力、酸梅、百香果…等多達14種口味，其中五葉松汁枝仔冰更是本店獨創!<br>
+
+                        白冷冰棒位於大甲溪發電廠旁邊，已成為中橫谷關旅遊時的重要吃冰地點，下次路過中橫時，一定要來光顧【白冷冰棒】。<br>
+
+                        如果吃不過癮，合作社還可以幫您宅配到家哦!<br>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                  <picture>
+                    <source media="(min-width: 992px)" srcset="./img/97-2-pc.jpg" />
+                    <source media="(min-width: 750px)" srcset="./img/97-2-pad.jpg">
+                    <source media="(min-width: 320px)" srcset="./img/97-2-phone.jpg">
+                    <img class="img-fluid" src="./img/97-2-pc.jpg" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- 白冷冰棒 -->
+
+<!-- 牛家莊 -->
+ <button type="button" class="btn btn-primary third_8" data-toggle="modal" data-target="#exampleModal8">
+  Launch demo modal
+</button>
+
+<div class="modal" id="exampleModal8" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+
+        <div class="raea">
+          <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+            <i class="far fa-times-circle fa-1x"></i>
+          </button>
+
+          <div class="pic"></div>
+          <div class="left_box">
+            <p>
+              Niou Jia Juang In Dongshi
+            </p>
+          </div>
+          <div class="bottom_box">
+            <div class="bo_left">
+              <div class="up_line"></div>
+              <div class="bottom_line"></div>
+            </div>
+            <div class="bottom_center">
+              <div class="bo_center"></div>
+              <div class="bo_box" style="background-image: url(./img/97-4-pc.jpg);"></div>
+            </div>
+            <div class="bo_right">
+              <p>● Dongshi ╳ <a href="http://www.nioujiajuang.com.tw/">Read
+                  More</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="row no-gutters ">
+              <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                <div class="text">
+                  <div class="small_up_title">
+                    客家料理 全牛大餐
+                  </div>
+                  <h1><b>東勢-牛稼莊</b></h1>
+                  <div class="small_bottom_en">
+                    Niou Jia Juang In Dongshi
+                  </div>
+
+                  <div class="small_bottom_title">
+                    <div class="small_bottom_calendar">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>時間：AM11:00~PM20:00</p>
+
+                    </div>
+                    <div class="small_bottom_map">
+                      <i class="fas fa-map-marker-alt">
+
+                      </i>
+                      <p>地點：台中市東勢區新豐街7號 </p>
+                    </div>
+                  </div>
+                  <div class="center_text">
+                    <p>
+                      全牛大餐 客家料理 60年歷史<br>
+
+                      東勢牛稼莊成立於民國49年，創始人李雲淡先生累積了多年牛肉料理的經驗，深諳牛肉的各種料理手法讓牛肉所有可食用部位皆完美呈現出其絕妙滋味。<br>
+
+                      我們使用的牛肉都來自於大甲溪畔的黃牛
+                      牛群吃的是金門酒糟。現殺、現切、現煮
+                      提供顧客們最完整的全牛大餐。<br>
+
+                      光靠牛肉和內臟至少就能做出12道客家風味的料理，紅燒牛尾、紅燒牛筋、牛雜湯、涼拌牛肚、煎牛脾…等。<br>
+                      一道道讓人讚不絕口，「再來一碗白飯」是我們最常聽到客人說的話，吃了還想再吃！<br>
+
+                      而不吃牛肉的客人，也別擔心吃不到這麼美味的料理，因為我們東勢人是全台灣唯一的大埔腔客家人，道地的客家料理當然也少不了囉！
+                      <br>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="./img/97-4-pc.jpg" />
+                  <source media="(min-width: 750px)" srcset="./img/97-4-pad.jpg">
+                  <source media="(min-width: 320px)" srcset="./img/97-4-phone.jpg">
+                  <img class="img-fluid" src="./img/97-4-pc.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- 牛家莊 -->
+
+<!-- 菇神 -->
+<button type="button" class="btn btn-primary third_9" data-toggle="modal" data-target="#exampleModal9">
+  Launch demo modal
+</button>
+
+<div class="modal" id="exampleModal9" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+
+        <div class="raea">
+          <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+            <i class="far fa-times-circle fa-1x"></i>
+          </button>
+
+          <div class="pic"></div>
+          <div class="left_box">
+            <p>
+              Master of Mushroom In Xinshe
+            </p>
+          </div>
+          <div class="bottom_box">
+            <div class="bo_left">
+              <div class="up_line"></div>
+              <div class="bottom_line"></div>
+            </div>
+            <div class="bottom_center">
+              <div class="bo_center"></div>
+              <div class="bo_box" style="background-image: url(./img/97-5-pc.jpg);"></div>
+            </div>
+            <div class="bo_right">
+              <p>● Xinshe ╳ <a href="https://www.gs1688.com.tw/">Read
+                  More</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="row no-gutters ">
+              <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                <div class="text">
+                  <div class="small_up_title">
+                    養生之道 食在菇神
+                  </div>
+                  <h1><b>新社-菇神</b></h1>
+                  <div class="small_bottom_en">
+                    Master of Mushroom In Xinshe
+                  </div>
+
+                  <div class="small_bottom_title">
+                    <div class="small_bottom_calendar">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>時間：AM11:00~PM21:00</p>
+
+                    </div>
+                    <div class="small_bottom_map">
+                      <i class="fas fa-map-marker-alt">
+
+                      </i>
+                      <p>地點：台中市新社區協成村協中街287號 </p>
+                    </div>
+                  </div>
+                  <div class="center_text">
+                    <p>
+                      菇神是一家以菇類為主題的火鍋餐廳，自2006年起在菇類的故鄉新社展店（新社菇類佔全國65％以上產值），以提供美味兼顧健康的菇類食品為目標。老闆以三代買賣香菇的經驗，精挑各地品質最好的菇類給消費者品嚐，多項商品更送至SGS與德國杜夫萊茵機構做自主檢驗。<br>
+
+                      除了享受菇類養生美食，菇神更設有門市，販售許多以菇為主題的商品，各種嚴選乾菇、菇類泡菜、菇餅乾、鮮蔬餅乾、各種醬料、百菇麵、香腸貢丸肉燥、百菇湯包、甚至各種菇主題的文具玩偶，好逛好買，滿足全家大小的需求。累積五年經驗製作的菇飲料—「玄耳」初採黑木耳露，與「好菇肉鬆」更多次榮獲台中市十大伴手禮首獎、最佳人氣獎、金口碑獎。
+                      <br>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="./img/97-5-pc.jpg" />
+                  <source media="(min-width: 750px)" srcset="./img/97-5-pad.jpg">
+                  <source media="(min-width: 320px)" srcset="./img/97-5-phone.jpg">
+                  <img class="img-fluid" src="./img/97-5-pc.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- 菇神 -->
+
+<!-- 康康豬 -->
+<button type="button" class="btn btn-primary third_10" data-toggle="modal" data-target="#exampleModal10">
+  Launch demo modal
+</button>
+
+<div class="modal" id="exampleModal10" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+
+        <div class="raea">
+          <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+            <i class="far fa-times-circle fa-1x"></i>
+          </button>
+
+          <div class="pic"></div>
+          <div class="left_box">
+            <p>
+              Healthy Pig In Fengyuan
+            </p>
+          </div>
+          <div class="bottom_box">
+            <div class="bo_left">
+              <div class="up_line"></div>
+              <div class="bottom_line"></div>
+            </div>
+            <div class="bottom_center">
+              <div class="bo_center"></div>
+              <div class="bo_box" style="background-image: url(./img/97-9-pc.jpg);"></div>
+            </div>
+            <div class="bo_right">
+              <p>● Fengyuan ╳ <a href="https://www.facebook.com/%E5%BA%B7%E5%BA%B7%E8%B1%AC-195496057137050/?ref=page_internal">Read
+                  More</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="row no-gutters ">
+              <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                <div class="text">
+                  <div class="small_up_title">
+                    人氣美食 獨家醬料
+                  </div>
+                  <h1><b>豐原康康豬</b></h1>
+                  <div class="small_bottom_en">
+                    Healthy Pig In Fengyuan
+                  </div>
+
+                  <div class="small_bottom_title">
+                    <div class="small_bottom_calendar">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>時間：AM06:00~PM13:30</p>
+
+                    </div>
+                    <div class="small_bottom_map">
+                      <i class="fas fa-map-marker-alt">
+
+                      </i>
+                      <p>地點：台中市豐原區西勢二街21號</p>
+                    </div>
+                  </div>
+                  <div class="center_text">
+                    <p>
+                      位在西勢路巷內的康康豬，是豐原最有名的炒麵豬血湯店家，炒麵豬血湯是台中滿常見的早餐組合。<br>
+                      有一說法台中豐原以前木工興盛，早上起床要吃點油葷才有力氣上工。另外民間說法豬血有清肺的功效，但是實際有沒有效就見仁見智了。<br>
+                      康康豬早上六點就開了，營業到下午一點半。賣的品項就是豬血湯與炒麵、肉燥飯、焢肉飯這幾種常見到不行的小吃，但生意就是超級好，人潮絡繹不絕。主要原因是用料新鮮實在，豬內臟處理得很好，還有一款特製的蔥辣醬，用餐的客人幾乎都卯起來加啊！<br>
+                      ！！注意！！康康豬湯基本都有加韭菜，不要韭菜的記得在點餐時要先說！！注意！！<br>
+                      炒 麵<br>
+                      黃色油麵，麵條是屬於稍微偏硬有嚼勁，Q彈帶有一點兒麵芯的口感，淋上肉燥再拌開吃時，香氣就會明顯傳出，油膩感不會太高，是很簡單但很好吃的味道，再加上台中人必備的東泉辣椒醬和店家的蔥辣醬更對味。<br>
+                      肉燥飯<br>
+                      有肥瘦適中的滷汁，搭配筍干，筍干吃起來軟嫩又不死鹹，香氣剛剛好，肉燥飯不單單只有肉燥飯，一口飯裡有肉燥、筍干，口感更豐富更有層次，米粒也煮的粒粒分明軟硬適中，口感真是不錯，若在搭配著店家自製的蔥辣醬風味更佳!<br>
+                      大腸豬血湯<br>
+                      由大骨熬成的湯頭風味，豬血紮實中又不失軟嫩，大腸軟Q有嚼勁，蘸店家的蔥辣醬更好吃，店家的蔥辣醬，來真的記得要試一下，偏重口味的朋友，都會拿來加在炒麵、肉燥飯上拌著吃，這醬料根本是店家的靈魂啊!
+                      <br>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="./img/97-9-pc.jpg" />
+                  <source media="(min-width: 750px)" srcset="./img/97-9-pad.jpg">
+                  <source media="(min-width: 320px)" srcset="./img/97-9-phone.jpg">
+                  <img class="img-fluid" src="./img/97-9-pc.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- 康康豬 -->
+
+<!-- 豐原排骨麵 -->
+<button type="button" class="btn btn-primary third_5" data-toggle="modal" data-target="#exampleModal5">
+  Launch demo modal
+</button>
+
+<div class="modal" id="exampleModal5" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+
+
+        <div class="raea">
+          <button type="button" class="close toggle_box" data-dismiss="modal" aria-label="Close">
+            <i class="far fa-times-circle fa-1x"></i>
+          </button>
+
+          <div class="pic"></div>
+          <div class="left_box">
+            <p>
+              Ribs Noodles In Fengyuan
+            </p>
+          </div>
+          <div class="bottom_box">
+            <div class="bo_left">
+              <div class="up_line"></div>
+              <div class="bottom_line"></div>
+            </div>
+            <div class="bottom_center">
+              <div class="bo_center"></div>
+              <div class="bo_box" style="background-image: url(./img/97-8-pc.jpg);"></div>
+            </div>
+            <div class="bo_right">
+              <p>● Fengyuan ╳ <a
+                  href="https://qqblog.tw/blog/post/46971016">Read
+                  More</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="row no-gutters ">
+              <div class="col-lg-6 col-md-12 col-12 order-2 order-md-2 order-lg-1">
+                <div class="text">
+                  <div class="small_up_title">
+                    口味獨特 油而不膩
+                  </div>
+                  <h1><b>豐原排骨麵</b></h1>
+                  <div class="small_bottom_en">
+                    Ribs Noodles In Fengyuan
+                  </div>
+
+                  <div class="small_bottom_title">
+                    <div class="small_bottom_calendar">
+                      <i class="far fa-calendar-alt"></i>
+                      <p>時間：中午12:00~14:00 晚上17:00~21:00</p>
+
+                    </div>
+                    <div class="small_bottom_map">
+                      <i class="fas fa-map-marker-alt">
+
+                      </i>
+                      <p>地點：台中市豐原區向陽路179號</p>
+                    </div>
+                  </div>
+                  <div class="center_text">
+                    <p>
+                      說到豐原排骨麵，很多人第一想到的都會是廟東裡的【清水排骨麵】，但豐原好吃的排骨麵其實還有很多家，其味道不盡相同，皆各有各的擁護者。<br>
+                      【豐原排骨麵店】位在向陽路上，離廟東大約走10分鐘的路程，對面是自成街，招牌在夜裡很顯眼，並不難找。外帶的就請直接往店裡面走，跟櫃台點餐再等候取餐就可以了，店裡是不給拍照、採訪的，老闆會叫你拍你自己的餐點就好了，也因為如此似乎沒有美食節目詳細介紹過。<br>
+                      內用的就請在門口的左手邊點餐，直接跟煮麵的阿姨說，阿姨會給一個號碼牌，等叫號時再舉手答應，店員就會幫忙把餐點送上桌。<br>
+                      除了排骨麵，還有肉排麵、什錦麵、肉焿麵…，選項比【清水排骨麵】來的多，   除招牌排骨麵外，肉排麵也非常多人推薦必吃的，肉排的厚度相當厚實有料，原先炸的外衣因為滷過後變得好軟，一口咬進後肉質超嫩加上已經滷得超入味，單吃就很爽快。麵條是採用傳統的黃油麵，就算放在湯裡再久依舊咬勁十足，而湯頭非常地濃郁，相對於吃比較清淡的朋友可能會覺得味道太重。
+                      <br>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-12 order-1 order-md-1">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="./img/97-8-pc.jpg" />
+                  <source media="(min-width: 750px)" srcset="./img/97-8-pad.jpg">
+                  <source media="(min-width: 320px)" srcset="./img/97-8-phone.jpg">
+                  <img class="img-fluid" src="./img/97-8-pc.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 豐原排骨麵 -->
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="../home/js/navbar.js"></script>
+  <script src="./js/swiper3.js"></script>
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    });
+  </script>
+</body>
+</html>
