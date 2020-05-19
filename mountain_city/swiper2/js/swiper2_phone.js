@@ -17,21 +17,21 @@
     let distance_x; // 最後滑鼠x相差距離
     let distance_y;// 最後滑鼠y相差距離
     let current_page = 0
-
+    
     // 取得最後座標
-    section2.addEventListener('mousemove', function (e) {
+    document.addEventListener('mousemove', function (e) {
         last_mouse.x = e.clientX
         last_mouse.y = e.clientY
     })
 
     //取得初始座標
-    section2.addEventListener('mousedown', function (e) {
+    document.addEventListener('mousedown', function (e) {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     })
 
     //mouseup
-    section2.addEventListener('mouseup', function () {
+    document.addEventListener('mouseup', function () {
         distance_x = last_mouse.x - mouse.x;
         if (distance_x > 10) {
             if (current_page <= 0) {
@@ -42,7 +42,7 @@
                 img_scene.classList.remove('active')
             });
             img_scene2[current_page].classList.add('active');
-        } else if (distance_x < 0) {
+        } else if (distance_x < -10) {
             if (current_page >= 4) {
                 current_page = current_page - 5;
             }
