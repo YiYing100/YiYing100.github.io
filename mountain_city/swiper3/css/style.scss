@@ -61,8 +61,6 @@ a:hover {
   opacity: 0;
   transition: all 0.3s;
   left: -30px;
-  //left: 50%;
-  //transform: translateX(-50%);
 
   &.active {
     left: 0;
@@ -97,7 +95,6 @@ a:hover {
       width: 400px;
       height: 550px;
       flex-shrink: 0;
-      //padding: 15px;
 
       @media screen and (max-width: 992px) {
         width: 340px;
@@ -204,7 +201,6 @@ a:hover {
         //background: #fff;
         //box-shadow: 0 6px 26px 6px rgba(0,0,0,0.25);
 
-        .news-date,
         .news__title,
         .news__txt {
           opacity: 1;
@@ -220,7 +216,6 @@ a:hover {
     &.active {
       color: #222222;
 
-      .news-date,
       .news__title,
       .news__txt {
         opacity: 1;
@@ -239,21 +234,6 @@ a:hover {
       padding: 20px;
     }
   }
-
-  &-date {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid;
-    display: inline-block;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-
-    @media screen and (max-width: 576px) {
-      margin-bottom: 10px;
-      display: inline-flex;
-      align-items: center;
-      padding-bottom: 0;
-    }
 
     &__title {
       display: block;
@@ -313,7 +293,6 @@ a:hover {
       height: 100%;
       width: 100%;
     }
-  }
 }
 
 .news__title {

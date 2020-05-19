@@ -36,6 +36,7 @@
   }
 
   var swiper = new Swiper(".news-slider", {
+    
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
@@ -74,11 +75,17 @@
       init: function () {
         var activeItem = document.querySelector(".swiper-slide-active");
         var sliderItem = activeItem.querySelector(".news__item");
+
+        //字變黑
         $(".swiper-slide-active .news__item").addClass("active");
+
+        //取方塊寬高，讓
         var x = sliderItem.getBoundingClientRect().left;
         var y = sliderItem.getBoundingClientRect().top;
         var width = sliderItem.getBoundingClientRect().width;
         var height = sliderItem.getBoundingClientRect().height;
+
+        //白色區塊顯示
         $(".item-bg").addClass("active");
         bg.style.width = width + "px";
         bg.style.height = height + "px";
@@ -86,14 +93,13 @@
       }
     },
   });
-
- 
+  window.addEventListener('resize', function () {
+    location.reload()
+  });
 
   swiper.on("touchEnd", function () {
     $(".news__item").removeClass("active");
     $(".swiper-slide-active .news__item").addClass("active");
-
-    
   });
 
   swiper.on("slideChange", function () {
