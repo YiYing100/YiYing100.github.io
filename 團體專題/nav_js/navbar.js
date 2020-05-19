@@ -83,13 +83,13 @@
                             document.location.href = "./index.html"
                             break;
                         case '2':
-                            document.location.href = "./page2.html"
+                            document.location.href = "../swiper2/swiper2.html"
                             break;
                         case '3':
-                            document.location.href = "./target.html"
+                            document.location.href = "../swiper1/swiper1.html"
                             break;
                         case '4':
-                            document.location.href = ""
+                            document.location.href = "../swiper3/swiper3.html"
                             break;
                         default:
                             document.location.href = "./index.html"

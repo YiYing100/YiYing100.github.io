@@ -1,4 +1,5 @@
 ;(function () {
+  
     var bg = document.querySelector(".item-bg");
       var items = document.querySelectorAll(".news__item");
       var item = document.querySelector(".news__item");
@@ -117,4 +118,50 @@
         bg.style.height = height + "px";
         bg.style.transform = "translateX(" + x + "px ) translateY(" + y + "px)";
       });
+      let third_6 = document.querySelector('.third_6');
+    let third_7 = document.querySelector('.third_7');
+    let third_8 = document.querySelector('.third_8');
+    let third_9 = document.querySelector('.third_9');
+    let third_10 = document.querySelector('.third_10');
+    let third_5 = document.querySelector('.third_5');
+    let third_content = document.querySelectorAll('.third_content');
+    third_content[0].addEventListener('click',third_content6)
+    third_content[1].addEventListener('click',third_content7)
+    third_content[2].addEventListener('click',third_content8)
+    third_content[3].addEventListener('click',third_content9)
+    third_content[4].addEventListener('click',third_content10)
+    third_content[5].addEventListener('click',third_content5)
+
+    third_content[6].addEventListener('click',third_content6)
+    third_content[7].addEventListener('click',third_content7)
+    third_content[8].addEventListener('click',third_content8)
+    third_content[9].addEventListener('click',third_content9)
+    third_content[10].addEventListener('click',third_content10)
+    third_content[11].addEventListener('click',third_content5)
+
+    third_content[12].addEventListener('click',third_content6)
+    third_content[13].addEventListener('click',third_content7)
+    third_content[14].addEventListener('click',third_content8)
+    third_content[15].addEventListener('click',third_content9)
+    third_content[16].addEventListener('click',third_content10)
+    third_content[17].addEventListener('click',third_content5)
+
+    function third_content6() {
+      third_6.click();
+    }
+    function third_content7() {
+      third_7.click();
+    }
+    function third_content8() {
+      third_8.click();
+    }
+    function third_content9() {
+      third_9.click();
+    }
+    function third_content10() {
+      third_10.click();
+    }
+    function third_content5() {
+      third_5.click();
+    }
 })();

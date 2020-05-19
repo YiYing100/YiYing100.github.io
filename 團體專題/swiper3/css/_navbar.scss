@@ -1,7 +1,7 @@
 .nav {
     position: absolute;
     width: 62px;
-    height: 100%;
+    height: 100vh;
     background-color: $bk_nav;
     background-image: url("../img/background.png");
     background-size: cover;
@@ -15,7 +15,7 @@
     &.open {
         position: absolute;
         width: 693px;
-        height: 100%;
+        height: 100vh;
         right: 0;
         z-index: 100;
 
