@@ -971,7 +971,7 @@ body {
   .section2 .swiper_dots {
     position: absolute;
     top: 70%;
-    left: 35%;
+    left: 30%;
   }
   .section2 .swiper_dots ul {
     display: -webkit-box;

@@ -225,7 +225,7 @@
     //自動輪播
     let counter = 0
     let buttonsCount = buttons.length
-    interval = window.setInterval(showNext, 2000);  // 設定循環
+    interval = window.setInterval(showNext, 3000);  // 設定循環
 
     // 帶入目前要顯示第幾張圖 
     let showCurrent = function () {

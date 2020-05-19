@@ -4,6 +4,9 @@
       var items = document.querySelectorAll(".news__item");
       var item = document.querySelector(".news__item");
 
+      // function cLog(content) {
+      //   console.log(content);
+      // }
 
       if ($(window).width() > 800) {
         $(document).on("mouseover", ".news__item", function (_event, _element) {
@@ -63,7 +66,28 @@
         pagination: {
           el: ".news-slider__pagination",
           clickable: true,
-        }
+        },
+        on: {
+          init: function () {
+            var activeItem = document.querySelector(".swiper-slide-active");
+
+            var sliderItem = activeItem.querySelector(".news__item");
+
+            $(".swiper-slide-active .news__item").addClass("active");
+
+            var x = sliderItem.getBoundingClientRect().left;
+            var y = sliderItem.getBoundingClientRect().top;
+            var width = sliderItem.getBoundingClientRect().width;
+            var height = sliderItem.getBoundingClientRect().height;
+
+            $(".item-bg").addClass("active");
+
+            bg.style.width = width + "px";
+            bg.style.height = height + "px";
+            bg.style.transform =
+              "translateX(" + x + "px ) translateY(" + y + "px)";
+          },
+        },
       });
 
       swiper.on("touchEnd", function () {
@@ -94,14 +118,12 @@
         bg.style.height = height + "px";
         bg.style.transform = "translateX(" + x + "px ) translateY(" + y + "px)";
       });
-      
     let third_6 = document.querySelector('.third_6');
     let third_7 = document.querySelector('.third_7');
     let third_8 = document.querySelector('.third_8');
     let third_9 = document.querySelector('.third_9');
     let third_10 = document.querySelector('.third_10');
     let third_5 = document.querySelector('.third_5');
-
     let third_content = document.querySelectorAll('.third_content');
     third_content[0].addEventListener('click',third_content6)
     third_content[1].addEventListener('click',third_content7)
