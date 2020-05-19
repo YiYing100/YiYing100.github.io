@@ -352,14 +352,17 @@ body {
     }
 
     .swiper_dots {
+      padding: 0;
+      margin: 0;
       position: absolute;
       top: 70%;
-      left: 30%;
+      left:50%;
+      transform: translateX(-70px);
+
       
 
       ul {
         display: flex;
-        width: 300px;
         .dot {
           list-style: none;
           width: 10px;

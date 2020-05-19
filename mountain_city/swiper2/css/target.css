@@ -969,15 +969,18 @@ body {
     cursor: pointer;
   }
   .section2 .swiper_dots {
+    padding: 0;
+    margin: 0;
     position: absolute;
     top: 70%;
-    left: 30%;
+    left: 50%;
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
   }
   .section2 .swiper_dots ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 300px;
   }
   .section2 .swiper_dots ul .dot {
     list-style: none;
