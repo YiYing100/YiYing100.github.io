@@ -785,6 +785,12 @@ body {
 }
 
 @media (max-width: 960px) {
+  .autoplay_all {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
   .section2 {
     width: 100%;
     height: 100vh;

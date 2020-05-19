@@ -9,7 +9,7 @@ body {
 
 .btn-primary {
   display: none;
-} 
+}
 
 #section1 {
   background-color: #2494a3;
@@ -197,6 +197,11 @@ body {
     transform: translateX(-86%);
   }
   .autoplay_all {
+    display: none;
+  }
+}
+.autoplay_all {
+  @media (max-width: 960px){
     display: none;
   }
 }
