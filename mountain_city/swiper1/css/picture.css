@@ -731,12 +731,12 @@ body {
   position: relative;
   left: 5px;
   color: #747272;
-  font-size: 5px;
+  font-size: 15px;
 }
 
 @media (max-width: 760px) {
   .content .gallery-thumbs .swiper-slide .thumb_content .sub_title {
-    font-size: 4vw;
+    font-size: 15px;
     left: 5px;
     top: -4px;
   }
