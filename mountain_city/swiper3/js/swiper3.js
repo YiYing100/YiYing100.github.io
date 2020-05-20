@@ -93,9 +93,7 @@
       }
     },
   });
-  window.addEventListener('resize', function () {
-    location.reload()
-  });
+
 
   swiper.on("touchEnd", function () {
     $(".news__item").removeClass("active");
@@ -119,6 +117,14 @@
     bg.style.width = width + "px";
     bg.style.height = height + "px";
     bg.style.transform = "translateX(" + x + "px ) translateY(" + y + "px)";
+  });
+
+  //切換手機螢幕 重整
+  window.addEventListener('resize', function () {
+    let width = document.body.clientWidth;
+    if (width <576 ){
+      location.reload()
+    }
   });
 
   let third_6 = document.querySelector(".third_6");

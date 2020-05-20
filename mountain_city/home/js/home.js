@@ -60,7 +60,7 @@
     })
 
 
-    window.setTimeout((begin_event), 2000)
+    window.setTimeout((begin_event), 6000)
     // console.log($('.bookspace'))
     // console.log($('.bookspace').offset().top)
 
@@ -82,9 +82,7 @@
         }
 
         document.querySelector('.hardcover_back').click()
-
     }
-
 
     let begin_tab = document.querySelector('.begin_tab')
     let tab_his = document.querySelector('.tab_his')
@@ -94,7 +92,6 @@
     let page = document.querySelector('.page')
     // **************下一頁***************
     document.querySelector('.hardcover_back').addEventListener('click', function () {
-        console.log(current_page)
         switch (current_page) {
             case 0:
                 $('.hardcover_front').addClass('turn');
@@ -198,14 +195,10 @@
                 }
                 break;
         }
-
-        console.log(current_page)
     })
     // **************上一頁***************
     document.querySelector('.hardcover_front').addEventListener('click', function () {
-        console.log(current_page)
         switch (current_page) {
-
             case 1:
                 $('.hardcover_front').removeClass('turn');
 
@@ -305,30 +298,59 @@
                 }
                 break;
         }
-        console.log(current_page)
     })
 
     // more按鈕
     document.querySelectorAll('.buttom_area').forEach(element => {
         element.addEventListener('click', function () {
-            switch (element.dataset.btn) {
-                case 'tab_1':
-                    document.location.href = "./index.html"
-                    break;
-                case 'tab_2':
-                    document.location.href = "./page2.html"
-                    break;
-                case 'tab_3':
-                    document.location.href = ""
-                    break;
-            }
+
+            document.querySelector('.nav_pic_text').classList.add('show')
+            document.querySelector('.nav_pic').classList.add('show')
+            document.querySelector('.nav').classList.add('full')
+            window.setTimeout(function () {
+                switch (element.dataset.btn) {
+                    case 'tab_1':
+                        document.location.href = "../swiper1/swiper1.html"
+                        break;
+                    case 'tab_2':
+                        document.location.href = "../swiper2/swiper2.html"
+                        break;
+                    case 'tab_3':
+                        document.location.href = "../swiper3/swiper3.html"
+                        break;
+                }
+            }, 1000)
         })
     })
+    // 手機more按鈕
+    document.querySelectorAll('.tab .left_area .bottom_block .btn_more').forEach(element => {
+        element.addEventListener('click', function () {
+            document.querySelector('.phone_list').classList.remove('hide')
+            document.querySelector('.phone_list').classList.add('longer')
+
+            window.setTimeout(function () {
+                document.querySelector('.phone_list').classList.remove('hidding')
+            }, 10)
+            window.setTimeout(function () {
+                switch (element.dataset.btn) {
+                    case 'tab_1':
+                        document.location.href = "../swiper1/swiper1.html"
+                        break;
+                    case 'tab_2':
+                        document.location.href = "../swiper2/swiper2.html"
+                        break;
+                    case 'tab_3':
+                        document.location.href = "../swiper3/swiper3.html"
+                        break;
+                }
+            }, 1000)
+        })
+    })
+
 
     // 書本大小改變
     resize_book()
     $(window).resize(resize_book);
-    $(window).resize(function(){console.log("123") });
 
     function resize_book() {
         if (document.body.clientWidth > 1400) {

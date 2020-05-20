@@ -4,7 +4,7 @@
   width: 62px;
   height: 100%;
   background-color: #3E3A39;
-  background-image: url("../img/background.png");
+  background-image: url("../img/navbar/background.png");
   background-size: cover;
   background-position: left;
   right: 0;
@@ -43,6 +43,10 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  line-height: 1em;
+  list-style: none;
+  padding: 0;
+  font-family: "Times New Roman";
 }
 
 .nav ul li::before {
@@ -245,7 +249,7 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  z-index: 10;
+  z-index: 101;
   top: 20px;
   right: 30px;
 }
@@ -354,6 +358,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  list-style: none;
+  padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -374,6 +380,7 @@
   margin-bottom: 30px;
   color: #fff;
   position: relative;
+  line-height: 1em;
 }
 
 @media (max-width: 600px) {
@@ -644,13 +651,13 @@ body {
 }
 
 .content .gallery-thumbs {
-  height: 100vh;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 30px 30px;
   margin-left: 20px;
   z-index: 3;
+  cursor: pointer;
 }
 
 .content .gallery-thumbs .swiper-slide.swiper-slide-active {
@@ -659,13 +666,14 @@ body {
           transform: scale(1.5);
 }
 
-.content .swiper-slide.swiper-slide-active .thumb_content {
-  opacity: 1;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+.content .gallery-thumbs .swiper-slide.swiper-slide-active .thumb_content {
+  display: block;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-.content .swiper-slide {
+.content .gallery-thumbs .swiper-slide {
   opacity: 0.3;
   border-radius: 100%;
   width: 110px;
@@ -673,25 +681,25 @@ body {
 }
 
 @media (max-width: 576px) {
-  .content .swiper-slide {
+  .content .gallery-thumbs .swiper-slide {
     width: 25vw;
   }
 }
 
 @media (min-height: 1024px) {
-  .content .swiper-slide {
+  .content .gallery-thumbs .swiper-slide {
     width: 15vw;
   }
 }
 
 @media (min-height: 1365px) {
-  .content .swiper-slide {
+  .content .gallery-thumbs .swiper-slide {
     width: 18vw;
   }
 }
 
-.content .swiper-slide .thumb_content {
-  opacity: 0;
+.content .gallery-thumbs .swiper-slide .thumb_content {
+  display: none;
   position: relative;
   left: 10vw;
   bottom: 10px;
@@ -699,7 +707,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  .content .swiper-slide .thumb_content {
+  .content .gallery-thumbs .swiper-slide .thumb_content {
     left: 15vw;
     bottom: 0px;
     top: 10px;
@@ -707,18 +715,18 @@ body {
 }
 
 @media (max-width: 760px) {
-  .content .swiper-slide .thumb_content {
+  .content .gallery-thumbs .swiper-slide .thumb_content {
     left: 25vw;
   }
 }
 
 @media (max-width: 576px) {
-  .content .swiper-slide .thumb_content {
+  .content .gallery-thumbs .swiper-slide .thumb_content {
     left: 30vw;
   }
 }
 
-.content .swiper-slide .thumb_content .sub_title {
+.content .gallery-thumbs .swiper-slide .thumb_content .sub_title {
   position: relative;
   left: 5px;
   color: #747272;
@@ -726,29 +734,28 @@ body {
 }
 
 @media (max-width: 760px) {
-  .content .swiper-slide .thumb_content .sub_title {
+  .content .gallery-thumbs .swiper-slide .thumb_content .sub_title {
     font-size: 1vw;
   }
 }
 
-.content .swiper-slide .thumb_content h2 {
+.content .gallery-thumbs .swiper-slide .thumb_content h2 {
   margin: 0;
   padding: 0;
   font-size: 2.5vw;
   font-family: 'Microsoft JhengHei';
   font-weight: bold;
-  cursor: pointer;
 }
 
 @media (max-width: 760px) {
-  .content .swiper-slide .thumb_content h2 {
+  .content .gallery-thumbs .swiper-slide .thumb_content h2 {
     font-size: 4vw;
     position: relative;
     left: 5px;
   }
 }
 
-.content .swiper-slide .thumb_content .sub_title2 {
+.content .gallery-thumbs .swiper-slide .sub_title2 {
   position: relative;
   bottom: 15px;
   left: 5px;
@@ -758,7 +765,7 @@ body {
 }
 
 @media (max-width: 760px) {
-  .content .swiper-slide .thumb_content .sub_title2 {
+  .content .gallery-thumbs .swiper-slide .sub_title2 {
     font-size: 1vw;
   }
 }

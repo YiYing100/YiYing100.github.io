@@ -31,6 +31,111 @@
   width: 105%;
 }
 
+.nav.begin_act {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
+          transition-timing-function: cubic-bezier(0.36, -0.25, 0.46, 0.98);
+}
+
+.nav.begin_act ul {
+  display: none;
+}
+
+.nav.begin_act .nav_pic, .nav.begin_act .nav_pic_text {
+  display: block;
+}
+
+.nav.begin_act .title_area {
+  display: block;
+  width: 500px;
+  height: 155px;
+  position: absolute;
+  top: 80px;
+  right: 230px;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .nav.begin_act .title_area {
+    display: none;
+  }
+}
+
+.nav.begin_act .title_area .dot {
+  font-size: 55px;
+  position: absolute;
+  left: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #DBB13C;
+}
+
+.nav.begin_act .title_area .title {
+  font-family: "微軟正黑體";
+  font-weight: bold;
+  font-size: 55px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 12px;
+}
+
+.nav.begin_act .title_area .title span {
+  color: #DBB13C;
+}
+
+.nav.begin_act .title_area hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 40px;
+}
+
+.nav.begin_act .title_area .sub_title {
+  font-family: "新宋体";
+  letter-spacing: 0.2em;
+  font-size: 21px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.nav.begin_act .content_area {
+  display: block;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #fff;
+  font-family: "新宋体";
+  font-size: 36px;
+  letter-spacing: 0.8em;
+  position: absolute;
+  top: 50%;
+  left: 370px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nav.begin_act .content_area .string {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.nav.begin_act .content_area .string:nth-child(2) {
+  padding-top: 35px;
+}
+
+.nav.begin_act .content_area .string:nth-child(3) {
+  padding-top: 70px;
+}
+
+.nav.begin_act .content_area span {
+  color: #DBB13C;
+}
+
+.nav.begin_act.start {
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .nav.nav {
     display: none;
@@ -223,6 +328,11 @@
   display: block;
 }
 
+.nav .title_area,
+.nav .content_area {
+  display: none;
+}
+
 /* 手機板NAV */
 .phone_nav {
   width: 100vw;
@@ -245,7 +355,7 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  z-index: 10;
+  z-index: 101;
   top: 20px;
   right: 30px;
 }
@@ -330,7 +440,7 @@
 }
 
 .phone_nav .phone_list.longer::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -518,6 +628,142 @@
 @media (max-width: 600px) {
   .phone_nav .phone_list .nav_back {
     display: none;
+  }
+}
+
+.phone_nav .phone_list .title_area, .phone_nav .phone_list .content_area {
+  display: none;
+}
+
+.phone_nav .phone_list.begin_act {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.phone_nav .phone_list.begin_act ul {
+  display: none;
+}
+
+.phone_nav .phone_list.begin_act .phone_nav_pic {
+  top: unset;
+  bottom: 50px;
+  right: 44px;
+  left: unset;
+}
+
+.phone_nav .phone_list.begin_act .title_area {
+  display: block;
+  margin: 0;
+  width: 500px;
+  height: 155px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+}
+
+.phone_nav .phone_list.begin_act .title_area .dot {
+  font-size: 55px;
+  position: absolute;
+  left: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #DBB13C;
+}
+
+.phone_nav .phone_list.begin_act .title_area .title {
+  font-family: "微軟正黑體";
+  font-weight: bold;
+  font-size: 55px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 12px;
+}
+
+.phone_nav .phone_list.begin_act .title_area .title span {
+  color: #DBB13C;
+}
+
+.phone_nav .phone_list.begin_act .title_area hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 40px;
+}
+
+.phone_nav .phone_list.begin_act .title_area .sub_title {
+  font-family: "新宋体";
+  letter-spacing: 0.2em;
+  font-size: 21px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .phone_nav .phone_list.begin_act .title_area {
+    width: 300px;
+    height: 110px;
+  }
+  .phone_nav .phone_list.begin_act .title_area .title {
+    font-size: 30px;
+  }
+  .phone_nav .phone_list.begin_act .title_area hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .phone_nav .phone_list.begin_act .title_area .sub_title {
+    font-size: 14px;
+  }
+}
+
+.phone_nav .phone_list.begin_act .content_area {
+  display: block;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #fff;
+  font-family: "新宋体";
+  font-size: 36px;
+  letter-spacing: 0.8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.phone_nav .phone_list.begin_act .content_area .string {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.phone_nav .phone_list.begin_act .content_area .string:nth-child(2) {
+  padding-top: 35px;
+}
+
+.phone_nav .phone_list.begin_act .content_area .string:nth-child(3) {
+  padding-top: 70px;
+}
+
+.phone_nav .phone_list.begin_act .content_area span {
+  color: #DBB13C;
+}
+
+@media (max-width: 768px) {
+  .phone_nav .phone_list.begin_act .content_area {
+    font-size: 20px;
+  }
+  .phone_nav .phone_list.begin_act .content_area .string {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .phone_nav .phone_list.begin_act .content_area .string:nth-child(2) {
+    padding-top: 20px;
+  }
+  .phone_nav .phone_list.begin_act .content_area .string:nth-child(3) {
+    padding-top: 40px;
   }
 }
 

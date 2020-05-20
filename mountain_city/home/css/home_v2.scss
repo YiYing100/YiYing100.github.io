@@ -60,6 +60,7 @@ body {
     height: 100vh;
     position: relative;
     background: $bk_home;
+    overflow: hidden;
 }
 
 .container_pc {
@@ -256,6 +257,7 @@ body {
                             .sub_title {
                                 padding-top: 10px;
                                 font-family: "新宋体";
+                                letter-spacing: 0.2em;
                                 font-size: 15px;
                                 text-align: end;
                             }
@@ -448,8 +450,8 @@ body {
             @media (max-width: 1400px) {
                 width: 60vw;
                 right: 0;
-                // top: 16%;
-                // bottom: 16%;
+                top: 16%;
+                bottom: 16%;
             }
             @media (max-width: 1200px) {
                 width: 81vw;
@@ -543,6 +545,8 @@ body {
                         margin-left: 40px;
                     }
                     .sub_title {
+                        font-family: "新宋体";
+                        letter-spacing: 0.2em;
                         font-size: 21px;
                         position: absolute;
                         right: 0;
