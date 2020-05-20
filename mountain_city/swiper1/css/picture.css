@@ -736,7 +736,7 @@ body {
 
 @media (max-width: 760px) {
   .content .gallery-thumbs .swiper-slide .thumb_content .sub_title {
-    font-size: 1vw;
+    font-size: 10px;
     left: 5px;
     top: -4px;
   }
@@ -769,7 +769,7 @@ body {
 
 @media (max-width: 760px) {
   .content .gallery-thumbs .swiper-slide .sub_title2 {
-    font-size: 1vw;
+    font-size: 10px;
     top: -25px;
     left: 7px;
   }
