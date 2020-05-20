@@ -682,7 +682,7 @@ body {
 
 @media (max-width: 576px) {
   .content .gallery-thumbs .swiper-slide {
-    width: 25vw;
+    width: 15vw;
   }
 }
 
@@ -722,7 +722,8 @@ body {
 
 @media (max-width: 576px) {
   .content .gallery-thumbs .swiper-slide .thumb_content {
-    left: 30vw;
+    left: 60px;
+    top: -10px;
   }
 }
 
@@ -736,6 +737,8 @@ body {
 @media (max-width: 760px) {
   .content .gallery-thumbs .swiper-slide .thumb_content .sub_title {
     font-size: 1vw;
+    left: 5px;
+    top: -4px;
   }
 }
 
@@ -767,6 +770,8 @@ body {
 @media (max-width: 760px) {
   .content .gallery-thumbs .swiper-slide .sub_title2 {
     font-size: 1vw;
+    top: -25px;
+    left: 7px;
   }
 }
 

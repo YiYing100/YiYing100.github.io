@@ -108,7 +108,7 @@ body {
       position: relative;
 
       @media (max-width:576px){
-      width: 25vw;
+      width: 15vw;
       }
       @media (min-height:1024px){
         width: 15vw;
@@ -132,7 +132,8 @@ body {
           left:25vw;
         }
         @media (max-width:576px){
-          left:30vw;
+          left:60px;
+          top:-10px;
         }
 
         .sub_title {
@@ -142,6 +143,9 @@ body {
           font-size: 5px;
           @media (max-width:760px){
             font-size:1vw;
+            left: 5px;
+            top:-4px;
+            
           }
         }
 
@@ -168,6 +172,9 @@ body {
           border-bottom:3px solid yellow;
           @media (max-width:760px){
             font-size:1vw;
+            top: -25px;
+            left: 7px;
+            
           }
         }
       }

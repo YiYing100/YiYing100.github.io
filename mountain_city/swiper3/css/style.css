@@ -44,6 +44,10 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  line-height: 1em;
+  list-style: none;
+  padding: 0;
+  font-family: "Times New Roman";
 }
 
 .nav ul li::before {
@@ -355,6 +359,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  list-style: none;
+  padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -375,6 +381,7 @@
   margin-bottom: 30px;
   color: #fff;
   position: relative;
+  line-height: 1em;
 }
 
 @media (max-width: 600px) {
