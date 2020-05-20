@@ -722,8 +722,8 @@ body {
 
 @media (max-width: 576px) {
   .content .gallery-thumbs .swiper-slide .thumb_content {
-    left: 60px;
-    top: -10px;
+    left: 120%;
+    top: -2%;
   }
 }
 
