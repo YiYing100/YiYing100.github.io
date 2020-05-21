@@ -4,7 +4,7 @@
   width: 62px;
   height: 100%;
   background-color: #3E3A39;
-  background-image: url("../img/background.png");
+  background-image: url("../img/navbar/background.png");
   background-size: cover;
   background-position: left;
   right: 0;
@@ -52,7 +52,7 @@
   height: 155px;
   position: absolute;
   top: 80px;
-  right: 230px;
+  left: calc(100vw - 730px);
   color: #fff;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .nav.begin_act.start {
-  width: 100%;
+  width: 105%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -148,6 +148,10 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  line-height: 1em;
+  list-style: none;
+  padding: 0;
+  font-family: "Times New Roman";
 }
 
 .nav ul li::before {
@@ -464,6 +468,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  list-style: none;
+  padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -484,6 +490,7 @@
   margin-bottom: 30px;
   color: #fff;
   position: relative;
+  line-height: 1em;
 }
 
 @media (max-width: 600px) {
@@ -867,7 +874,7 @@ body {
   width: 530px;
   -webkit-transform: translate(-60px, -100px);
           transform: translate(-60px, -100px);
-  background-image: url(../img/PC_530x1080-14.png);
+  background-image: url(../img/home/PC_530x1080-14.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1049,7 +1056,7 @@ body {
 .container_pc .right_block .tab .left_area .top_block .title_area .align_center .dot {
   width: 31px;
   height: 24px;
-  background-image: url(../img/dot.png);
+  background-image: url(../img/home/dot.png);
   background-repeat: no-repeat;
   padding: 3px 0;
 }
@@ -1066,7 +1073,7 @@ body {
   display: inline-block;
   width: 55px;
   height: 55px;
-  background-image: url(../img/title_cross.png);
+  background-image: url(../img/home/title_cross.png);
   background-position: 0% 0%;
   background-size: cover;
 }
@@ -1253,7 +1260,7 @@ body {
 .container_pc .right_block .tab .right_area .buttom_area .more_icon {
   width: 39px;
   height: 31px;
-  background-image: url(../img/more_icon.png);
+  background-image: url(../img/home/more_icon.png);
   background-position: center;
   background-size: cover;
 }
@@ -1269,6 +1276,8 @@ body {
 .container_pc .right_block .tab .right_area .buttom_area::after {
   content: "";
   position: absolute;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   top: 0;
   bottom: 0;
   right: 50%;
@@ -1277,8 +1286,8 @@ body {
 }
 
 .container_pc .right_block .tab .right_area .buttom_area:hover::after {
-  top: 0;
-  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 @media (max-width: 1400px) {

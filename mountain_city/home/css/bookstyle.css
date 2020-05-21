@@ -65,7 +65,7 @@
 }
 
 .hardcover_front li:last-child .front {
-  background-image: url(../img/封面.jpg);
+  background-image: url(../img/home/封面.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
