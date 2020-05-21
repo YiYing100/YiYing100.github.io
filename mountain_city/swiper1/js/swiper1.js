@@ -1,34 +1,5 @@
 ; (function () {
-  let swiper_slide = document.querySelectorAll('.swiper-slide');
-  console.log(swiper_slide);
-  
-  let page1 = document.querySelector('.page1');
-  let page2 = document.querySelector('.page2');
-  let page3 = document.querySelector('.page3');
-  let page4 = document.querySelector('.page4');
-  let page5 = document.querySelector('.page5');
-  let page6 = document.querySelector('.page6');
-  let page7 = document.querySelector('.page7');
 
-  let btn_page1 = document.querySelector('.btn_page1');
-  let btn_page2 = document.querySelector('.btn_page2');
-  let btn_page3 = document.querySelector('.btn_page3');
-  let btn_page4 = document.querySelector('.btn_page4');
-  let btn_page5 = document.querySelector('.btn_page5');
-  let btn_page6 = document.querySelector('.btn_page6');
-  let btn_page7 = document.querySelector('.btn_page7');
-
-  page1.addEventListener('click', click_page1);
-  page2.addEventListener('click', click_page2);
-  page3.addEventListener('click', click_page3);
-  page4.addEventListener('click', click_page4);
-  page5.addEventListener('click', click_page5);
-  page6.addEventListener('click', click_page6);
-  page7.addEventListener('click', click_page7);
-  
-  $(".thumb_content").on("click",".page1",function(){
-    btn_page1.click()
-  });
   
   function click_page1() {
     btn_page1.click()
@@ -49,8 +20,14 @@
     btn_page6.click()
   }
   function click_page7() {
+    console.log(123132);
+    
     btn_page7.click()
   }
+
+
+  
+  
 
   $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
@@ -94,12 +71,50 @@
     targetIndex = Number(galleryThumbs.realIndex);
     galleryTop.slideTo(targetIndex, 700, true);
   })
- 
-  $(".swiper-wrapper").on("click",".swiper-slide",function(){
-});
-  
-// $(".swiper-wrapper").delegate("swiper-slide","click",function(){
-  
+ let swipers = document.querySelectorAll('.swiper-slide');
+let thumb_contents = document.querySelectorAll('.thumb_content');
 
-// });
+let page1 = document.querySelectorAll('.page1');
+let page2 = document.querySelectorAll('.page2');
+let page3 = document.querySelectorAll('.page3');
+let page4 = document.querySelectorAll('.page4');
+let page5 = document.querySelectorAll('.page5');
+let page6 = document.querySelectorAll('.page6');
+let page7 = document.querySelectorAll('.page7');
+
+let btn_page1 = document.querySelector('.btn_page1');
+let btn_page2 = document.querySelector('.btn_page2');
+let btn_page3 = document.querySelector('.btn_page3');
+let btn_page4 = document.querySelector('.btn_page4');
+let btn_page5 = document.querySelector('.btn_page5');
+let btn_page6 = document.querySelector('.btn_page6');
+let btn_page7 = document.querySelector('.btn_page7');
+
+page1.forEach(page => {
+  page.addEventListener('click', click_page1);
+});
+page2.forEach(page => {
+  page.addEventListener('click', click_page2);
+});
+page3.forEach(page => {
+  page.addEventListener('click', click_page3);
+});
+page4.forEach(page => {
+  page.addEventListener('click', click_page4);
+});
+page5.forEach(page => {
+  page.addEventListener('click', click_page5);
+});
+page6.forEach(page => {
+  page.addEventListener('click', click_page6);
+});
+page7.forEach(page => {
+  page.addEventListener('click', click_page7);
+});
+
+console.log(page2);
+
+
+
+
 })();
