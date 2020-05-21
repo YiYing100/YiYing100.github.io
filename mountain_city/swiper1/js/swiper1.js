@@ -111,10 +111,4 @@ page6.forEach(page => {
 page7.forEach(page => {
   page.addEventListener('click', click_page7);
 });
-
-console.log(page2);
-
-
-
-
 })();
