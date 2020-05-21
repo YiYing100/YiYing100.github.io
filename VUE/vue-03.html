@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <img :src= 'src' alt="">
+                    <!-- <h1 v-text= "title"></h1> -->
+                    <h1>{{ title }}</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script>
+        let obj = {
+            src:"https://img.ltn.com.tw/Upload/partner/page/2019/09/11/190911-4824-01-bIL1w.jpg" ,
+            title:'貓'            
+        }
+
+        // $('.title img').attr('src', "https://img.ltn.com.tw/Upload/partner/page/2019/09/11/190911-4824-01-bIL1w.jpg")
+
+        // $('.title h1').html(obj.title)
+
+        // let title = document.querySelector('.title img')
+        // title['src']= 'https://img.ltn.com.tw/Upload/partner/page/2019/09/11/190911-4824-01-bIL1w.
+        let vm = new Vue({
+            el:'#app',
+            data:obj
+        })
+
+        
+    </script>
+</body>
+</html>

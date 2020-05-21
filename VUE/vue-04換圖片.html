@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .container img {
+            width:900px;
+            height: 500px;
+        }
+
+        .text {
+            display: flex;
+            justify-content: space-evenly;
+            width: 300px;
+            margin: 0 auto;
+            background-color: bisque;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .text p {
+            flex:1;
+            margin: 0;
+            padding: 20px 10px;
+            background-color:rgb(27, 84, 190);
+            color:white;
+            text-align: center;
+        }
+        .text .order {
+            background-color: rgb(67, 153, 124);
+            border-radius: 10px 0 0 10px;
+        }
+
+        .text .place {
+            background-color:darkgray;
+        }
+
+        .text .season{
+            background-color: darkkhaki;
+            border-radius: 0 10px 10px 0;
+        }
+        .arrow {
+            width: 50px;
+            position: relative;
+            
+        }
+
+        .arrow img{ 
+            width: 100%;
+        }
+
+        .arrow .arrow-left {
+            position: absolute;
+            left:220px;
+            bottom: -220px;
+        }
+
+        .arrow .arrow-right {
+            width: 55px;
+            height: 65px;
+            position: absolute;
+            left:630px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <img @click= 'changeImg()' :src='today.src' alt="">
+                <div class="text">
+                    <p class='order'>{{ today.order}}</p>
+                    <p class= 'place'>{{ today.place}}</p>
+                    <p class= 'season'>{{ today.season}}</p>
+                </div>
+                <div class="arrow">
+                    <img v-if='index !=0 ' @click= 'changeIndex(-1)' class='arrow-left' src="https://image.flaticon.com/icons/svg/46/46441.svg" alt="">
+                    <img v-if= 'index != total-1'@click= 'changeIndex(1)' class='arrow-right' src="https://i.pinimg.com/originals/f7/4d/30/f74d3003e8f46b56021e42c6515a831d.jpg" alt="">
+                </div>
+            </div>
+        
+    </div>
+</section><script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script>
+        let data= {
+            index:0,
+            menu:[{order:1, place: '武陵農場', season: '春天',src:'https://d1grca2t3zpuug.cloudfront.net/2018/01/sakura2.jpg'}, {order:2, place: '夏威夷', season: '夏天',src:'https://photo.settour.com.tw/900x600/https%3A%2F%2Fwww.settour.com.tw%2Fss_img%2FGFG%2F0000%2F0148%2F53%2Fori_6979962.jpg'},{order:3, place: '奧萬大', season: '秋天',src:'https://storage.googleapis.com/smiletaiwan-cms-cwg-tw/article/201809/article-5baf8cdb404f7.jpg'},{order:4, place: '富士山', season: '冬天',src:'https://cdn.zekkei-japan.jp/images/articles/d3e0044b1e5ba61e10fd967469e5d699.jpg'}]
+        }
+
+        let vm = new Vue({
+            el:'#app',
+            data:data,
+            computed:{
+                today(){
+                return this.menu[this.index]
+            },
+            total() {
+                return this.menu.length
+            }
+        },
+            methods: {
+                changeIndex(change){
+                    this.index = (this.index + change + this.total) % this.total
+                    // this.index += change
+                    // if(this.index <0) this.index = this.menu.length- 1
+                    // else if(this.index > this.menu.length -1) this.index = 0 
+                }
+            }
+        })
+    </script>
+</body>
+</html>
