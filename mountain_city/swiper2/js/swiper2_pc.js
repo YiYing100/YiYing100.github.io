@@ -45,7 +45,6 @@
       });
       button_sea.classList.add("active");
       clearInterval(interval);
-
     }
 
     function change_img_sky() {
@@ -120,7 +119,6 @@
       });
       button_deepsea.classList.add("active");
       clearInterval(interval);
-
     }
 
     // 擷取圖片
@@ -333,7 +331,6 @@
         button.classList.remove("active");
       });
       button_desert.classList.add("active");
-
     }
 
     function autoplay4() {
@@ -357,6 +354,5 @@
         button.classList.remove("active");
       });
       button_deepsea.classList.add("active");
-
     }
   }());
