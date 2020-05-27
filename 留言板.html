@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(232, 255, 0, 1) 0%,
+          rgba(101, 242, 115, 1) 51%,
+          rgba(32, 208, 191, 1) 99%
+        );
+      }
+
+      * {
+        font-family: "微軟正黑體";
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 1140px;
+        padding: 15px 60px;
+      }
+
+      .container h1 {
+        font-weight: bold;
+        font-size: 60px;
+        text-align: center;
+        margin:8px
+        
+      }
+
+      .group {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 24px;
+        margin: 15px 0;
+      }
+
+      .group label {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .group input {
+        width: 50%;
+        padding: 5px 10px;
+        font-size: 24px;
+        border-radius: 5px;
+      }
+
+      .group input:focus {
+        border: 1px solid lightskyblue;
+      }
+
+      .group textarea {
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 24px;
+      }
+
+      .group button {
+        background-color: unset;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .group .button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .card {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+      }
+
+      .card .img {
+        flex: 1;
+      }
+
+      .card img {
+        width: 80%;
+      }
+
+      .card .content {
+        flex: 1;
+        font-size: 24px;
+      }
+
+      .card .content h2 {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="animated bounce infinite">留言板</h1>
+      <form>
+        <div class="group title">
+          <label for="#title">標題</label>
+          <input id="title" type="text"/>
+        </div>
+        <div class="group content">
+          <label for="#content">內容</label>
+          <textarea
+            id="content"
+            type="text"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="group url">
+          <label for="#href">超連結</label>
+          <input id="href" type="text" />
+        </div>
+        <div class="group img">
+          <label for="#image_url">大頭貼</label>
+          <input id="image_url"  type="text"/>
+        </div>
+        <div class="group date">
+          <input id="date" type="hidden" />
+        </div>
+        <div class="group buttons">
+          <div class="button">送出</div>
+          <button type="reset">清除</button>
+        </div>
+      </form>
+      <div class="cards"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script>
+      fetch('https://ajax-lesson.digipack-develop.com/news')
+          .then(function (response) {
+              console.log(response)
+              return response.json();
+          })
+          .then(function (myJson) {
+              console.log(myJson);
+
+              $.each( myJson, function( index, value ){
+                  let old_data = $('.cards').html()
+                  $('.cards').html(
+                  `<div class="card">
+                  <div class="img">
+                  <img src=${value.image_url} alt="">
+                  </div>
+                  <div class="content">
+                  <h2>標題:${value.title}</h2>
+                  <p>內容:${value.content}</p>
+                  <p>時間:${value.date}</p>
+                  <p>超連結:${value.href}</p>
+              </div>
+          </div>
+          ${old_data}`)
+              })
+          });
+
+      $('.group .button').click(function () {
+          let title = $("#title").val();
+          let content = $('#content').val();
+          let href = $('#href').val();
+          let image_url = $('#image_url').val();
+          let date = new Date();
+          let old_data = $('.cards').html()
+          let data = {
+              "title": title,
+              "content": content,
+              "href": href,
+              "image_url": image_url,
+              "date": date
+          }
+
+          $('.cards').html(
+              `<div class="card">
+              <div class="img">
+                  <img src=${image_url} alt="">
+              </div>
+              <div class="content">
+                  <h2>標題:${title}</h2>
+                  <p>內容:${content}</p>
+                  <p>時間:${date}</p>
+                  <p>超連結:${href}</p>
+              </div>
+          </div>
+          ${old_data}`
+          );
+          $('input,textarea').val('')
+
+          //傳到資料庫
+          $.ajax({
+              url: 'https://ajax-lesson.digipack-develop.com/news',
+              method:'POST',
+              data: data
+          });
+      })
+    </script>
+  </body>
+</html>
