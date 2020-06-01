@@ -3,9 +3,6 @@
   var items = document.querySelectorAll(".news__item");
   var item = document.querySelector(".news__item");
 
-  // function cLog(content) {
-  //   console.log(content);
-  // }
 
   if ($(window).width() > 800) {
     $(document).on("mouseover", ".news__item", function (_event, _element) {
@@ -17,9 +14,13 @@
           var width = this.getBoundingClientRect().width;
           var height = this.getBoundingClientRect().height;
 
+          //opacity 1,增加白框
           $(".item-bg").addClass("active");
+
+
+          //內容變回白色
           $(".news__item").removeClass("active");
-          // $('.news__item').removeClass('active');
+
 
           bg.style.width = width + "px";
           bg.style.height = height + "px";
@@ -37,9 +38,7 @@
 
   var swiper = new Swiper(".news-slider", {
     
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
+
     effect: "coverflow",
     grabCursor: true,
     loop: true,
@@ -58,7 +57,6 @@
     breakpoints: {
       480: {
         spaceBetween: 0,
-        // centeredSlides: true,
       },
     },
     simulateTouch: true,
@@ -79,7 +77,7 @@
         //字變黑
         $(".swiper-slide-active .news__item").addClass("active");
 
-        //取方塊寬高，讓
+        //取方塊寬高
         var x = sliderItem.getBoundingClientRect().left;
         var y = sliderItem.getBoundingClientRect().top;
         var width = sliderItem.getBoundingClientRect().width;

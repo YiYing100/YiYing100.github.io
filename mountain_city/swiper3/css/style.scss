@@ -10,7 +10,12 @@ html {
 }
 
 .wrapper {
-  padding-top: 200px;
+  padding-top: 15vh;
+
+  @media (max-width:768px){
+  padding-top: 18vh;
+
+  }
 }
 
 a, a:hover {
@@ -161,11 +166,11 @@ a, a:hover {
 
     &__pagination {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 1vh;
 
-      // @media screen and (max-width: 576px) {
-      //   margin-top: 50px;
-      // }
+      @media screen and (max-width: 576px) {
+        margin-top: -5vh;
+      }
 
       .swiper-pagination-bullet {
         width: 13px;
