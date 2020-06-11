@@ -48,13 +48,17 @@ body {
 
     .swiper-slide {
       opacity: 0.3;
-      border-radius: 100%;
+      border-radius: 50%;
       width: 5vw;
       min-width: 80px;
       position: relative;
 
       @media (min-width:1920px){
         width: 6.8vw;
+      }
+
+      @media (min-height:1366px){
+        width: 16vw;
       }
 
       .thumb_content {
@@ -69,6 +73,10 @@ body {
 
         @media (min-width:1920px){
           transform: translate(10% , -5%);
+        }
+        
+        @media (min-height:1366px){
+          transform: translate(10% , 25%);
         }
 
 

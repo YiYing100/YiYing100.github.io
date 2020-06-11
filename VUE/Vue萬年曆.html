@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .weekdays {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .weekday {
+        text-align: center;
+        flex: 1;
+      }
+
+      .week {
+        background-color: whitesmoke;
+        display: flex;
+        border-bottom: 1px solid #dddddd;
+        position: relative;
+      }
+
+      .day {
+        flex: 1 1 0%;
+        border: 1px solid #dddddd;
+        height: 90px;
+        line-height: 30px;
+        border-left: 1px solid #dddddd;
+        position: relative;
+      }
+
+      .day:before {
+        content: attr(data-date);
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 30px;
+        border-left: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+      }
+      .active:before {
+        background-color: black;
+        color: white;
+      }
+
+      .day.others {
+        background-color: #dddddd;
+        color: #141414;
+      }
+
+      .day > .things {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ year }}年 {{ month +1 }}月</h1>
+      <div class="buttons">
+        <button @click="adjustYear(-1)">上一年</button>
+        <button @click="adjustMonth(-1)">上個月</button>
+        <button @click="setToday()">今天</button>
+        <button @click="adjustMonth(1)">下個月</button>
+        <button @click="adjustYear(1)">下一年</button>
+      </div>
+      <div class="weekdays">
+        <div class="weekday">日</div>
+        <div class="weekday">一</div>
+        <div class="weekday">二</div>
+        <div class="weekday">三</div>
+        <div class="weekday">四</div>
+        <div class="weekday">五</div>
+        <div class="weekday">六</div>
+      </div>
+      <div class="week" v-for="i in 6">
+        <div
+          class="day"
+          v-for="j in 7"
+          :data-date="calendarMonth[(i-1)*7 + j -1].date"
+          :class="{active:calendarMonth[(i-1)*7 + j -1].year === today.year && calendarMonth[(i-1)*7 + j -1].month === today.month && calendarMonth[(i-1)*7 + j -1].date === today.date,
+          others:calendarMonth[(i-1)*7 + j -1].month !== month }"
+          @dblclick='addTodos(calendarMonth[(i-1)*7 + j -1])'
+        >
+          <div class='things' v-if="calendarMonth[(i-1)*7 + j -1].count">
+            {{calendarMonth[(i-1)*7 + j -1].count}}件代辦
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script>
+      let vm = new Vue({
+        el: "#app",
+        data() {
+          return {
+            year: new Date().getFullYear(),
+            month: new Date().getMonth(),
+            date: new Date().getDate(),
+          };
+        },
+        computed: {
+          today() {
+            let obj = {
+              year: new Date().getFullYear(),
+              month: new Date().getMonth(),
+              date: new Date().getDate(),
+            };
+            return obj;
+          },
+          calendarFirstDay() {
+            const mDate = new Date(this.year, this.month, 1);
+            const date = new Date(this.year, this.month, 1 - mDate.getDay());
+
+            return {
+              year: date.getFullYear(),
+              month: date.getMonth(),
+              date: date.getDate(),
+              day: date.getDay(),
+            };
+          },
+          calendarMonth() {
+            let arr = [];
+            let date;
+            for (let i = 0; i < 42; i++) {
+              date = new Date(
+                this.calendarFirstDay.year,
+                this.calendarFirstDay.month,
+                this.calendarFirstDay.date + i
+              );
+              let content = {
+                year: date.getFullYear(),
+                month: date.getMonth(),
+                date: date.getDate(),
+                day: date.getDay(),
+              };
+              content.count = this.getTodos(content).length;
+              arr.push(content);
+            }
+
+            return arr;
+          },
+          todos() {
+            return {
+              2020: {
+                3: {
+                  29: [{ content: ["掃地", "洗碗"],done:false }],
+                },
+                5: {
+                  7: [{ content: ["洗衣服", "曬衣"],done:false}, { content: "蠟筆小新",done:false }],
+                },
+              },
+            };
+          },
+        },
+        methods: {
+          adjustYear(change) {
+            this.year += change;
+          },
+          adjustMonth(change) {
+            this.month += change;
+            if (this.month > 11) {
+              this.adjustYear(1);
+              this.month = 0;
+            } else if (this.month < 0) {
+              this.adjustYear(-1);
+              this.month = 11;
+            }
+          },
+          setToday() {
+            this.year = new Date().getFullYear();
+            this.month = new Date().getMonth();
+          },
+          getTodos(date) {
+            return date.year in this.todos &&
+              date.month in this.todos[date.year] &&
+              date.date in this.todos[date.year][date.month]
+              ? this.todos[date.year][date.month][date.date]
+              : [];
+          },
+          addTodos({year , month ,date}) {
+            let content = window.prompt()
+            let y = this.todos[year] || {}
+            let m = this.todos[year][month] || {}
+            let d = this.todos[year][month][date] || []
+            
+            if (content.trim()){
+              d.push({
+                content:content.trim(),
+                done:false
+              })
+            }
+            this.$set(this.todos , year , y)
+            this.$set(this.todos[year] , month , m)
+            this.$set(this.todos[year][month] , date , d)
+          }
+        },
+      });
+    </script>
+  </body>
+</html>
